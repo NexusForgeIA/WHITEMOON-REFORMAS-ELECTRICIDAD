@@ -1,9 +1,12 @@
 /* =========================================================================
    WhiteMoon · Dani, asistente de reformas — agente IA que capta leads
    Árbol: servicio → zona → nombre → teléfono → cierre.
-   Al cerrar: inserta el lead en Supabase (leads_web, REST + publishable key)
-   y llama a la Edge Function reformas-notify, que es quien manda el WhatsApp.
-   La apikey de CallMeBot vive SOLO en los Secrets de la función, nunca aquí.
+   Al cerrar dispara DOS cosas EN PARALELO:
+     1. insert del lead en Supabase (leads_web, REST + publishable key),
+        con un reintento si la pasarela devuelve un 503 transitorio;
+     2. aviso a la Edge Function reformas-notify por sendBeacon, que es
+        quien manda el mensaje a Telegram.
+   El token del bot vive SOLO en los Secrets de la función, nunca aquí.
    ========================================================================= */
 (function () {
   'use strict';
@@ -178,6 +181,8 @@
       }
       lead.telefono = text.trim();
       step = 'fin';
+      /* en paralelo: el aviso no espera al insert ni al revés, así que un 503
+         de la REST no deja a Cristóbal sin el mensaje de Telegram */
       saveLead();
       notifyLead();
       var cierre = lead.urgente
@@ -198,48 +203,82 @@
   }
 
   /* leads_web no tiene columnas zona/servicio: el servicio va en `interes`
-     y la zona se guarda en `mensaje` (convención del resto de demos). */
+     y la zona se guarda en `mensaje` (convención del resto de demos).
+
+     La pasarela REST devuelve algún 503 suelto sin llegar a Postgres (visto en
+     esta demo el 2026-08-10). Como el lead es lo único que no se puede perder,
+     se reintenta una vez ante 503 o ante fallo de red. */
   function saveLead() {
     var mensaje = 'Servicio: ' + lead.servicio +
                   ' | Zona: ' + lead.zona +
                   (lead.urgente ? ' | URGENTE' : '');
-    fetch(SUPABASE_URL + '/rest/v1/' + LEADS_TABLE, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_KEY,
-        'Authorization': 'Bearer ' + SUPABASE_KEY,
-        'Prefer': 'return=minimal'
-      },
-      body: JSON.stringify({
-        nombre: lead.nombre,
-        telefono: lead.telefono,
-        sector: SECTOR,
-        interes: lead.servicio,
-        mensaje: mensaje,
-        origen: ORIGEN
-      })
-    }).catch(function () {});
+    var body = JSON.stringify({
+      nombre: lead.nombre,
+      telefono: lead.telefono,
+      sector: SECTOR,
+      interes: lead.servicio,
+      mensaje: mensaje,
+      origen: ORIGEN
+    });
+
+    function insertar(reintentado) {
+      return fetch(SUPABASE_URL + '/rest/v1/' + LEADS_TABLE, {
+        method: 'POST',
+        keepalive: true,
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': 'Bearer ' + SUPABASE_KEY,
+          'Prefer': 'return=minimal'
+        },
+        body: body
+      }).then(function (r) {
+        if (r.status === 503 && !reintentado) return esperarYReintentar();
+        return r;
+      }, function () {
+        if (!reintentado) return esperarYReintentar();
+      });
+    }
+
+    function esperarYReintentar() {
+      return new Promise(function (res) { setTimeout(res, 800); })
+        .then(function () { return insertar(true); });
+    }
+
+    insertar(false).catch(function () {});
   }
 
-  /* La notificación WhatsApp la envía la Edge Function (CallMeBot server-side).
-     No abrimos wa.me en el cliente ni exponemos ninguna apikey. */
+  /* El aviso lo manda la Edge Function a Telegram (token server-side).
+     Va por sendBeacon para que salga aunque el usuario cierre la pestaña justo
+     después de dar el teléfono.
+
+     OJO con el Content-Type: tiene que ser 'text/plain;charset=UTF-8'. Con
+     'application/json' el beacon deja de ser una petición simple, Chrome lanza
+     el preflight CORS, la función registra el OPTIONS y descarta el POST —
+     y sendBeacon() devuelve true igual, así que el aviso se pierde en silencio.
+     La función parsea con req.json() y no mira el Content-Type. */
   function notifyLead() {
+    var payload = JSON.stringify({
+      nombre: lead.nombre,
+      telefono: lead.telefono,
+      sector: SECTOR,
+      servicio: lead.servicio,
+      zona: lead.zona,
+      urgente: lead.urgente,
+      origen: ORIGEN
+    });
+
+    if (navigator.sendBeacon) {
+      var blob = new Blob([payload], { type: 'text/plain;charset=UTF-8' });
+      if (navigator.sendBeacon(NOTIFY_FN, blob)) return;
+    }
+    /* sin sendBeacon (o si la cola del navegador lo rechaza): fetch keepalive,
+       también con un Content-Type de la lista segura para evitar el preflight */
     fetch(NOTIFY_FN, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': SUPABASE_KEY,
-        'Authorization': 'Bearer ' + SUPABASE_KEY
-      },
-      body: JSON.stringify({
-        nombre: lead.nombre,
-        telefono: lead.telefono,
-        servicio: lead.servicio,
-        zona: lead.zona,
-        urgente: lead.urgente,
-        origen: ORIGEN
-      })
+      keepalive: true,
+      headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+      body: payload
     }).catch(function () {});
   }
 

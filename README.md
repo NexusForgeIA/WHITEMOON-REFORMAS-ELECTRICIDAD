@@ -23,16 +23,31 @@ GitHub Pages, con un agente IA que capta leads reales.
 Árbol: **servicio → zona → nombre → teléfono → cierre**. Distingue urgencias
 (electricidad y fontanería) de reformas, que siempre se presupuestan con visita.
 
-Al cerrar la conversación:
+Al cerrar la conversación dispara **las dos cosas en paralelo**:
 
-1. Inserta el lead en Supabase `leads_web` por REST con la *publishable key*
+1. Insert del lead en Supabase `leads_web` por REST con la *publishable key*
    (`origen='demo-reformas-electricidad'`, `sector='reformas-electricidad-fontaneria'`).
-   El servicio va en `interes` y la zona dentro de `mensaje`.
-2. Llama a `POST /functions/v1/reformas-notify`, que envía el WhatsApp al
-   número de WhiteMoon vía CallMeBot.
+   El servicio va en `interes` y la zona dentro de `mensaje`. Si la pasarela
+   devuelve un `503` transitorio, se reintenta una vez.
+2. Aviso a `POST /functions/v1/reformas-notify` por `navigator.sendBeacon`, que
+   envía el mensaje a **Telegram**.
 
-La `apikey` de CallMeBot vive **solo** en los Secrets del proyecto Supabase
-(`CALLMEBOT_APIKEY`, `WA_NUMBER`). Nunca en el JS del navegador.
+Ni el insert espera al aviso ni el aviso al insert: así un `503` de la REST no
+deja el mensaje de Telegram sin salir.
+
+### Dos detalles que no se pueden tocar
+
+- **El beacon va en `text/plain;charset=UTF-8`**, nunca en `application/json`.
+  Con JSON el beacon deja de ser una petición simple, Chrome lanza el preflight
+  CORS, la función registra el `OPTIONS` y descarta el `POST` — y
+  `sendBeacon()` devuelve `true` igual, así que el aviso se pierde sin rastro.
+  La función parsea con `req.json()` y no mira el `Content-Type`.
+- **El aviso va por Telegram, nunca por CallMeBot** (regla fija del proyecto).
+  `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID` viven **solo** en los Secrets del
+  proyecto Supabase. Nunca en el JS del navegador.
+
+La función aplica además el guard estándar de WhiteMoon: sin `nombre` **y**
+`telefono` responde `400 {"ok":false,"error":"lead incompleto"}` y no avisa.
 
 ## Desplegar la Edge Function
 
