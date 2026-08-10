@@ -531,7 +531,41 @@ body.bot-open .bot-win{ opacity:1; visibility:visible; transform:translateY(0) s
 .chip:hover{ background:rgba(124,77,255,.18); border-color:var(--p); }
 .chip.urgent{ color:#fff; background:var(--p); border-color:transparent; font-weight:600; }
 
+/* --- tarjeta de confirmación del cierre (datos verificados) ---------------
+   Acento verde --g, no morado: cierra el flujo, no invita a otra acción.
+   Contrastes sobre el fondo de la tarjeta (#0d1c20, la mezcla real del
+   rgba(0,212,170,.07) sobre --bg-2): --g 9.13:1, --text-2 10.56:1, y el
+   --g del CTA sobre su propio fondo 7.88:1. */
+.bot-done{
+  align-self:stretch; display:flex; gap:12px; align-items:flex-start;
+  padding:14px 15px; border-radius:14px; border-bottom-left-radius:5px;
+  background:rgba(0,212,170,.07); border:1px solid rgba(0,212,170,.32);
+  animation:msgIn .35s var(--ease);
+}
+@media (prefers-reduced-motion: reduce){ .bot-done{ animation:none; } }
+.bot-done__ic{
+  width:30px; height:30px; flex:none; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--g); background:rgba(0,212,170,.14); border:1px solid rgba(0,212,170,.45);
+}
+.bot-done__ic svg{ width:17px; height:17px; }
+.bot-done__body{ min-width:0; }
+.bot-done b{ display:block; font-size:14.5px; font-weight:600; color:var(--g); }
+.bot-done p{ margin:5px 0 0; font-size:14px; line-height:1.55; color:var(--text-2); }
+.bot-done__cta{
+  display:inline-flex; align-items:center; gap:8px; margin-top:12px;
+  padding:9px 14px; border-radius:10px; font-size:13.5px; font-weight:600;
+  color:var(--g); border:1px solid rgba(0,212,170,.45); background:rgba(0,212,170,.08);
+  transition:background .25s var(--ease), border-color .25s var(--ease);
+}
+.bot-done__cta svg{ width:15px; height:15px; flex:none; }
+.bot-done__cta:hover{ background:rgba(0,212,170,.16); border-color:var(--g); }
+
 .bot-input{ display:flex; gap:8px; padding:12px 14px calc(12px + env(safe-area-inset-bottom)); border-top:1px solid var(--line); background:var(--bg-2); flex:none; }
+/* conversación cerrada: el input queda deshabilitado para que se vea que terminó */
+.bot-input.is-done input,
+.bot-input.is-done .bot-send{ opacity:.45; }
+.bot-input.is-done .bot-send{ pointer-events:none; }
 .bot-input input{
   flex:1; min-width:0; padding:.7em .95em; border-radius:11px; font-family:inherit; font-size:14.5px;
   color:var(--text); background:var(--bg-3); border:1px solid var(--line-2); transition:border-color .25s var(--ease);
