@@ -12,11 +12,26 @@
   const year = $("#year");
   if (year) year.textContent = new Date().getFullYear();
 
-  /* ---------- Header scroll ---------- */
+  /* ---------- Header scroll ----------
+     Con un centinela de 1px en vez de un listener de scroll: leer
+     window.scrollY en cada evento forzaba reflow (~130 ms en móvil). */
   const header = $(".header");
-  const onScroll = () => header && header.classList.toggle("scrolled", window.scrollY > 8);
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+  if (header) {
+    if ("IntersectionObserver" in window) {
+      const sentinel = document.createElement("div");
+      sentinel.setAttribute("aria-hidden", "true");
+      sentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:9px;pointer-events:none";
+      document.body.prepend(sentinel);
+      new IntersectionObserver(
+        (e) => header.classList.toggle("scrolled", !e[0].isIntersecting),
+        { threshold: 0 }
+      ).observe(sentinel);
+    } else {
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 8);
+      }, { passive: true });
+    }
+  }
 
   /* ---------- Menú móvil ---------- */
   const burger = $(".burger");
@@ -199,10 +214,13 @@
     document.addEventListener("visibilitychange", () => { visible = !document.hidden; });
   }
 
-  /* ---------- Guardia anti-overflow (dev) ---------- */
-  window.addEventListener("load", () => {
-    if (document.documentElement.scrollWidth > document.documentElement.clientWidth) {
-      console.warn("[layout] overflow horizontal:", document.documentElement.scrollWidth, ">", document.documentElement.clientWidth);
+  /* ---------- Guardia anti-overflow (dev) ----------
+     En idle: mide el layout fuera del camino crítico. */
+  const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 800));
+  window.addEventListener("load", () => idle(() => {
+    const el = document.documentElement;
+    if (el.scrollWidth > el.clientWidth) {
+      console.warn("[layout] overflow horizontal:", el.scrollWidth, ">", el.clientWidth);
     }
-  });
+  }));
 })();

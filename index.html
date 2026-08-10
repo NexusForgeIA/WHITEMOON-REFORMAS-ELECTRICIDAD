@@ -43,7 +43,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- LCP candidate del hero -->
-<link rel="preload" as="image" href="assets/hero-reformas.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-reformas.jpg" imagesrcset="assets/hero-reformas-480.jpg 480w, assets/hero-reformas.jpg 900w" imagesizes="(max-width:900px) 90vw, 435px" fetchpriority="high">
 
 <!-- Carga asíncrona: la hoja de fuentes deja de bloquear el render -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
@@ -238,7 +238,7 @@
 
       <div class="hero__aside">
       <figure class="hero__media reveal" data-delay="160">
-        <img src="assets/hero-reformas.jpg" alt="Electricista con casco instalando una caja de conexiones en la pared de una obra" width="900" height="600" fetchpriority="high">
+        <img src="assets/hero-reformas.jpg" srcset="assets/hero-reformas-480.jpg 480w, assets/hero-reformas.jpg 900w" sizes="(max-width:900px) 90vw, 435px" alt="Electricista con casco instalando una caja de conexiones en la pared de una obra" width="900" height="600" fetchpriority="high">
       </figure>
 
       <aside class="hero__card reveal" data-delay="200">
@@ -289,7 +289,7 @@
   <div class="wrap">
     <div class="about__grid">
       <div class="about__media reveal">
-        <img src="assets/nosotros-obra.jpg" alt="Dos operarios cortando molduras de madera con una ingletadora durante una reforma" loading="lazy" width="720" height="900">
+        <img src="assets/nosotros-obra.jpg" srcset="assets/nosotros-obra-480.jpg 480w, assets/nosotros-obra.jpg 720w" sizes="(max-width:900px) min(90vw, 420px), 40vw" alt="Dos operarios cortando molduras de madera con una ingletadora durante una reforma" loading="lazy" width="720" height="900">
         <div class="about__badge">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tools"/></svg>
           <div><b>Equipo propio</b><span>Majadahonda y Madrid Oeste</span></div>
@@ -340,27 +340,27 @@
     </div>
     <div class="services__grid">
       <article class="svc reveal">
-        <div class="svc__media"><img src="assets/svc-reformas-integrales.jpg" alt="Vivienda en obra con tabiques abiertos y un operario trabajando sobre un andamio" width="800" height="450" loading="lazy"><span class="svc__num">01</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span></div>
+        <div class="svc__media"><img src="assets/svc-reformas-integrales.jpg" srcset="assets/svc-reformas-integrales-480.jpg 480w, assets/svc-reformas-integrales.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Vivienda en obra con tabiques abiertos y un operario trabajando sobre un andamio" width="800" height="450" loading="lazy"><span class="svc__num">01</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span></div>
         <div class="svc__body"><h3>Reformas integrales</h3><p>Viviendas y locales de principio a fin: distribución, albañilería, instalaciones y acabados.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
       <article class="svc reveal" data-delay="80">
-        <div class="svc__media"><img src="assets/svc-bano.jpg" alt="Baño reformado con ducha de obra, mampara de cristal y mueble con doble lavabo" width="800" height="450" loading="lazy"><span class="svc__num">02</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bath"/></svg></span></div>
+        <div class="svc__media"><img src="assets/svc-bano.jpg" srcset="assets/svc-bano-480.jpg 480w, assets/svc-bano.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Baño reformado con ducha de obra, mampara de cristal y mueble con doble lavabo" width="800" height="450" loading="lazy"><span class="svc__num">02</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bath"/></svg></span></div>
         <div class="svc__body"><h3>Reformas de baño</h3><p>Cambio de bañera por plato de ducha, alicatado, sanitarios y fontanería nueva.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
       <article class="svc reveal" data-delay="160">
-        <div class="svc__media"><img src="assets/svc-cocina.jpg" alt="Cocina reformada con muebles blancos, isla y electrodomésticos de acero inoxidable" width="800" height="450" loading="lazy"><span class="svc__num">03</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-kitchen"/></svg></span></div>
+        <div class="svc__media"><img src="assets/svc-cocina.jpg" srcset="assets/svc-cocina-480.jpg 480w, assets/svc-cocina.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Cocina reformada con muebles blancos, isla y electrodomésticos de acero inoxidable" width="800" height="450" loading="lazy"><span class="svc__num">03</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-kitchen"/></svg></span></div>
         <div class="svc__body"><h3>Reformas de cocina</h3><p>Muebles, encimera, campana y toda la instalación de agua y electricidad al día.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
       <article class="svc reveal">
-        <div class="svc__media"><img src="assets/svc-electricidad.jpg" alt="Electricista comprobando con un multímetro los automáticos de un cuadro eléctrico" width="800" height="450" loading="lazy"><span class="svc__num">04</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span></div>
+        <div class="svc__media"><img src="assets/svc-electricidad.jpg" srcset="assets/svc-electricidad-480.jpg 480w, assets/svc-electricidad.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Electricista comprobando con un multímetro los automáticos de un cuadro eléctrico" width="800" height="450" loading="lazy"><span class="svc__num">04</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span></div>
         <div class="svc__body"><h3>Electricidad</h3><p>Instalaciones nuevas, cambio de cuadro, boletín eléctrico y reparación de averías.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
       <article class="svc reveal" data-delay="80">
-        <div class="svc__media"><img src="assets/svc-fontaneria.jpg" alt="Fontanero reparando el sifón y las llaves de paso bajo el mueble de un lavabo" width="800" height="450" loading="lazy"><span class="svc__num">05</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span></div>
+        <div class="svc__media"><img src="assets/svc-fontaneria.jpg" srcset="assets/svc-fontaneria-480.jpg 480w, assets/svc-fontaneria.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Fontanero reparando el sifón y las llaves de paso bajo el mueble de un lavabo" width="800" height="450" loading="lazy"><span class="svc__num">05</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span></div>
         <div class="svc__body"><h3>Fontanería</h3><p>Fugas y humedades, calentadores y termos, grifería, sanitarios y cambio de tuberías.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
       <article class="svc reveal" data-delay="160">
-        <div class="svc__media"><img src="assets/svc-urgencias.jpg" alt="Operario sujetando un cable eléctrico pelado con guantes de protección" width="800" height="450" loading="lazy"><span class="svc__num">06</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span></div>
+        <div class="svc__media"><img src="assets/svc-urgencias.jpg" srcset="assets/svc-urgencias-480.jpg 480w, assets/svc-urgencias.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Operario sujetando un cable eléctrico pelado con guantes de protección" width="800" height="450" loading="lazy"><span class="svc__num">06</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span></div>
         <div class="svc__body"><h3>Urgencias eléctricas y de fontanería</h3><p>Te has quedado sin luz o tienes una fuga: lo atendemos como urgencia, no como obra.</p><a class="svc__link" href="tel:+34643199580">Llamar ahora<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
     </div>
@@ -540,7 +540,7 @@
 <!-- ===================== DANI · AGENTE IA ===================== -->
 <button class="bot-fab" id="botFab" type="button" aria-label="Abrir el chat con Dani, asistente de reformas" aria-expanded="false" aria-controls="botWin">
   <span class="ring" aria-hidden="true"></span>
-  <span class="badge" aria-hidden="true">1</span>
+  <span class="badge" aria-hidden="true"></span>
   <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
 </button>
 
