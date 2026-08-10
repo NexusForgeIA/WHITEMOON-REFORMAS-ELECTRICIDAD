@@ -1,30 +1,25 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 
-// reformas-notify — notifica por WhatsApp un nuevo lead de la demo de
-// reformas, electricidad y fontaneria.
+// reformas-notify — notifica por Telegram un nuevo lead de la demo de
+// reformas, electricidad y fontaneria (WHITEMOON-REFORMAS-ELECTRICIDAD).
 // El lead ya se inserta en leads_web desde el cliente
-// (origen='demo-reformas-electricidad', sector='reformas-electricidad-fontaneria');
-// esta funcion SOLO envia la notificacion WhatsApp via CallMeBot, manteniendo
-// la apikey EXCLUSIVAMENTE server-side.
-// Mismo patron que cerrajeros-notify / talleres-notify / estetica-notify.
+// (origen='demo-reformas-electricidad'); esta funcion SOLO envia la
+// notificacion via Telegram Bot API, manteniendo el token EXCLUSIVAMENTE
+// server-side. Regla fija del proyecto: TODA demo con agente IA avisa por
+// Telegram (regla-aviso-telegram.md). Mismo patron que mudanzas-notify.
 //
-// Secrets del proyecto (Supabase -> Edge Functions -> Secrets):
-//   CALLMEBOT_APIKEY  — apikey de CallMeBot vinculada al numero de WhiteMoon
-//   WA_NUMBER         — numero destino del aviso (por defecto 34643199580)
+// Recibe (POST JSON): { nombre, telefono, sector, servicio, zona, urgente, origen }.
 //
-// El aviso va SIEMPRE al WhatsApp de WhiteMoon, nunca al del cliente.
+// Secrets usados (nunca en cliente):
+//   - TELEGRAM_BOT_TOKEN : token del bot de Telegram
+//   - TELEGRAM_CHAT_ID   : chat destino del aviso
 //
-// verify_jwt: false (se llama desde el navegador sin sesion; no expone secretos).
-//
-// Recibe (POST JSON): { nombre, telefono, servicio, zona, urgente, origen }
-
-const DEFAULT_WA = "34643199580";
+// Si el envio falla -> console.warn, nunca interrumpe nada.
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
 Deno.serve(async (req: Request) => {
@@ -46,41 +41,46 @@ Deno.serve(async (req: Request) => {
   }
 
   const data = (payload.args ?? payload) as Record<string, unknown>;
-  const nombre = String(data.nombre ?? "").trim() || "-";
-  const telefono = String(data.telefono ?? "").trim() || "-";
-  const servicio = String(data.servicio ?? "").trim() || "-";
-  const zona = String(data.zona ?? "").trim() || "-";
-  const origen = String(data.origen ?? "demo-reformas-electricidad").trim() || "-";
+  const nombre = String(data.nombre ?? "").trim();
+  const telefono = String(data.telefono ?? "").trim();
+  const sector = String(data.sector ?? "reformas-electricidad-fontaneria").trim();
+  const servicio = String(data.servicio ?? "").trim();
+  const zona = String(data.zona ?? "").trim();
+  const origen = String(data.origen ?? "demo-reformas-electricidad").trim();
   const urgente = data.urgente === true || String(data.urgente ?? "") === "true";
 
-  const message =
-    (urgente
-      ? "URGENCIA — Electricidad/Fontaneria (demo Reformas)\n"
-      : "Nuevo lead Reformas · Electricidad · Fontaneria (demo)\n") +
-    `Nombre: ${nombre} | Tel: ${telefono}\n` +
-    `Servicio: ${servicio}\n` +
-    `Zona: ${zona}\n` +
-    `Origen: ${origen}`;
+  // Guard de lead incompleto — estandar WhiteMoon.
+  if (!nombre || !telefono) {
+    return json({ ok: false, error: "lead incompleto" }, 400);
+  }
 
-  const notifyPhone = (Deno.env.get("WA_NUMBER") ?? DEFAULT_WA).trim();
+  const message =
+    (urgente ? "🚨 URGENCIA" : "🔔 Nuevo lead") +
+    ` (${origen}) · ${sector}\n` +
+    `Nombre: ${nombre || "-"}\n` +
+    `Teléfono: ${telefono || "-"}\n` +
+    `Servicio: ${servicio || "-"}\n` +
+    `Zona: ${zona || "-"}`;
 
   let notified = false;
   try {
-    const callmebotKey = Deno.env.get("CALLMEBOT_APIKEY");
-    if (callmebotKey) {
-      const notifyUrl =
-        `https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(notifyPhone)}` +
-        `&text=${encodeURIComponent(message)}&apikey=${encodeURIComponent(callmebotKey)}`;
-      const r = await fetch(notifyUrl);
+    const tgToken = Deno.env.get("TELEGRAM_BOT_TOKEN");
+    const tgChat = Deno.env.get("TELEGRAM_CHAT_ID");
+    if (tgToken && tgChat) {
+      const r = await fetch(`https://api.telegram.org/bot${tgToken}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: tgChat, text: message }),
+      });
       notified = r.ok;
       if (!r.ok) {
-        console.warn("[reformas-notify] CallMeBot fallo:", r.status);
+        console.warn("[reformas-notify] Telegram fallo:", r.status, await r.text());
       }
     } else {
-      console.warn("[reformas-notify] sin CALLMEBOT_APIKEY, mensaje:", message);
+      console.warn("[reformas-notify] sin TELEGRAM_BOT_TOKEN/CHAT_ID, mensaje:", message);
     }
   } catch (e) {
-    console.warn("[reformas-notify] error enviando WhatsApp:", e);
+    console.warn("[reformas-notify] error enviando Telegram:", e);
   }
 
   return json({ ok: true, notified });
