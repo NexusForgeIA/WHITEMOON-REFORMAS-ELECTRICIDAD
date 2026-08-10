@@ -185,21 +185,78 @@
          de la REST no deja a Cristóbal sin el mensaje de Telegram */
       saveLead();
       notifyLead();
-      var cierre = lead.urgente
-        ? 'Listo, ' + lead.nombre + '. Aviso enviado: te llamamos al ' + lead.telefono + ' ahora mismo.\n\nAl ser una urgencia, lo más rápido es que llames tú al [LLAMAR]. Te decimos el precio antes de tocar nada.'
-        : 'Listo, ' + lead.nombre + '. Hemos anotado tu solicitud (' + lead.servicio.toLowerCase() + ', ' + lead.zona + ') y te llamamos al ' + lead.telefono + ' para concretar la visita y darte el presupuesto.\n\nSi lo prefieres, puedes llamar tú al [LLAMAR].';
-      botSay(cierre, 900);
-      setTimeout(function () {
-        setChips([{ label: 'Llamar ahora', urgente: true }]);
-        var b = botChips.querySelector('.chip');
-        if (b) b.addEventListener('click', function () { window.location.href = 'tel:' + TEL; });
-      }, reduceMotion ? 0 : 1600);
+      cerrarConTarjeta();
       return;
     }
+  }
 
-    if (step === 'fin') {
-      botSay('Ya tenemos tus datos, ' + lead.nombre + '. Si es una urgencia de luz o agua, llama al [LLAMAR] y te atendemos al momento.');
+  /* ============ CIERRE ============
+     Ya tenemos nombre, teléfono, servicio y zona: el flujo termina con una
+     tarjeta de confirmación, no con otra petición al usuario. Solo la rama
+     urgente conserva un CTA de llamada, porque ahí la espera sí importa. */
+  function cerrarConTarjeta() {
+    typing(true);
+    setTimeout(function () {
+      typing(false);
+
+      var card = document.createElement('div');
+      card.className = 'bot-done';
+      card.setAttribute('role', 'status');
+      card.setAttribute('aria-live', 'polite');
+
+      var ic = document.createElement('span');
+      ic.className = 'bot-done__ic';
+      ic.setAttribute('aria-hidden', 'true');
+      ic.innerHTML = '<svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>';
+
+      var body = document.createElement('div');
+      body.className = 'bot-done__body';
+
+      var titulo = document.createElement('b');
+      /* el ✓ del titular es decorativo: el icono ya está al lado y un lector
+         de pantalla no tiene por qué leer "marca de verificación" */
+      titulo.innerHTML = '<span aria-hidden="true">✓ </span>';
+      titulo.appendChild(document.createTextNode('Datos recibidos'));
+
+      var texto = document.createElement('p');
+      texto.textContent =
+        'Gracias, ' + lead.nombre + '. Hemos registrado tu solicitud de ' +
+        lead.servicio.toLowerCase() + ' en ' + lead.zona +
+        '. Te llamamos al ' + lead.telefono +
+        ' en breve para concretar la visita y darte el presupuesto.';
+
+      body.appendChild(titulo);
+      body.appendChild(texto);
+
+      /* Solo en urgencias: un único CTA secundario para no esperar la llamada */
+      if (lead.urgente) {
+        var cta = document.createElement('a');
+        cta.className = 'bot-done__cta';
+        cta.href = 'tel:' + TEL;
+        cta.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>';
+        cta.appendChild(document.createTextNode('Para atención inmediata, llámanos'));
+        body.appendChild(cta);
+      }
+
+      card.appendChild(ic);
+      card.appendChild(body);
+      botBody.appendChild(card);
+      scrollBot();
+      cerrarInput();
+    }, reduceMotion ? 0 : 900);
+  }
+
+  /* La conversación ha terminado: se deshabilita el input para que quede claro
+     que no hay que escribir nada más. */
+  function cerrarInput() {
+    if (botForm) botForm.classList.add('is-done');
+    if (botInput) {
+      botInput.disabled = true;
+      botInput.value = '';
+      botInput.placeholder = 'Conversación finalizada';
     }
+    var send = botForm && botForm.querySelector('.bot-send');
+    if (send) send.disabled = true;
   }
 
   /* leads_web no tiene columnas zona/servicio: el servicio va en `interes`
