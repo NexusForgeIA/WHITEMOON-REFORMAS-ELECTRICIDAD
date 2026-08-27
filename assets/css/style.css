@@ -596,6 +596,216 @@ body.bot-open .bot-win{ opacity:1; visibility:visible; transform:translateY(0) s
 .cursor-ring.hover{ width:50px; height:50px; border-color:var(--p); }
 
 /* =========================================================================
+   RITMO DE SECCIÓN — banda alterna + numeración de fondo
+   Las bandas usan --bg-2, así que las tarjetas que van dentro de una banda
+   se pintan sobre --bg-3 para no fundirse con el fondo (es el caso de
+   .paso y .precio). Las tarjetas sobre fondo normal siguen en --bg-2.
+   ========================================================================= */
+.sec-alt{ background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+
+/* Número de sección en marca de agua. Contorno a .13 de alfa: queda por
+   debajo del texto y nunca compite con él. Oculto por debajo de 900px,
+   donde no hay margen lateral y se cruzaría con los titulares. */
+.bignum{
+  position:absolute; top:clamp(8px,2.5vw,30px); z-index:0;
+  font-family:var(--f-mono); font-weight:700; line-height:.76;
+  font-size:clamp(96px,14vw,200px); letter-spacing:-.03em;
+  color:transparent; -webkit-text-stroke:1px rgba(124,77,255,.13);
+  pointer-events:none; user-select:none;
+}
+.bignum--l{ left:0; }
+.bignum--r{ right:0; }
+/* Paralaje sin JS ni librerías: línea de tiempo de scroll nativa donde
+   existe, y nada donde no (Safari/Firefox lo ignoran sin romper nada). */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .bignum{ animation:bignumDrift linear both; animation-timeline:view(); animation-range:entry 0% exit 100%; }
+    @keyframes bignumDrift{ from{ transform:translateY(6%); } to{ transform:translateY(-16%); } }
+  }
+}
+
+/* =========================================================================
+   SERVICIOS — precio orientativo y CTA que abre a Dani
+   El CTA es <button> porque abre el chat, no navega: mismo aspecto que el
+   .svc__link enlace, pero sin los estilos que hereda un botón nativo.
+   ========================================================================= */
+.svc__price{
+  display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;
+  margin:0 0 16px; padding-top:15px; border-top:1px solid var(--line);
+  font-size:13.5px; color:var(--muted);
+}
+.svc__price b{ font-family:var(--f-mono); font-size:20px; font-weight:700; color:var(--text); letter-spacing:-.01em; }
+.svc__price small{ font-family:var(--f-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--steel); }
+button.svc__link{ border:none; background:transparent; padding:0; text-align:left; font-size:14px; font-weight:600; }
+
+/* =========================================================================
+   CÓMO TRABAJAMOS (04 pasos)
+   ========================================================================= */
+.proceso{ padding:clamp(60px,9vw,110px) 0; }
+.proceso__grid{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.paso{
+  position:relative; padding:30px 26px 28px; border-radius:var(--radius);
+  border:1px solid var(--line); background:var(--bg-3);
+  transition:border-color .3s var(--ease), transform .3s var(--ease);
+}
+.paso:hover{ border-color:var(--line-2); transform:translateY(-4px); }
+.paso__n{
+  position:absolute; top:18px; right:20px; font-family:var(--f-mono);
+  font-size:34px; font-weight:700; line-height:1; letter-spacing:-.03em;
+  color:transparent; -webkit-text-stroke:1px rgba(124,77,255,.35);
+}
+.paso__ic{
+  display:flex; align-items:center; justify-content:center;
+  width:48px; height:48px; border-radius:12px; margin-bottom:20px;
+  background:rgba(124,77,255,.1); border:1px solid rgba(124,77,255,.25);
+}
+.paso__ic svg{ width:24px; height:24px; color:var(--p2); }
+.paso h3{ font-size:17.5px; font-weight:600; margin:0 0 9px; }
+.paso p{ font-size:14.5px; color:var(--muted); margin:0; }
+
+/* =========================================================================
+   ÁREAS DE TRABAJO
+   ========================================================================= */
+.areas{ padding:clamp(60px,9vw,110px) 0; }
+.areas__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.area{
+  position:relative; overflow:hidden; padding:32px 28px;
+  border:1px solid var(--line); border-radius:var(--radius); background:var(--bg-2);
+  transition:border-color .3s var(--ease), background .3s var(--ease);
+}
+.area::before{
+  content:""; position:absolute; left:0; top:0; height:100%; width:2px;
+  background:var(--p); transform:scaleY(0); transform-origin:top;
+  transition:transform .35s var(--ease);
+}
+.area:hover{ border-color:var(--line-2); background:var(--bg-3); }
+.area:hover::before{ transform:scaleY(1); }
+.area__ic{
+  display:flex; align-items:center; justify-content:center;
+  width:52px; height:52px; border-radius:13px; margin-bottom:22px;
+  background:rgba(124,77,255,.1); border:1px solid rgba(124,77,255,.25);
+}
+.area__ic svg{ width:26px; height:26px; color:var(--p2); }
+.area h3{ font-size:20px; font-weight:600; margin:0 0 10px; }
+.area > p{ font-size:14.5px; color:var(--muted); margin:0 0 22px; }
+.area ul{ list-style:none; margin:0; padding:0; display:grid; gap:12px; border-top:1px solid var(--line); padding-top:20px; }
+.area li{ display:flex; align-items:flex-start; gap:11px; font-size:14.5px; color:var(--text-2); }
+.area li svg{ width:17px; height:17px; color:var(--g); flex:none; margin-top:3px; }
+
+/* =========================================================================
+   PRECIOS ORIENTATIVOS
+   Demo: ninguna cifra es una tarifa cerrada y la web lo dice tres veces
+   (aviso bajo el titular, "desde" en cada fila y nota al pie del grid).
+   ========================================================================= */
+.precios{ padding:clamp(60px,9vw,110px) 0; }
+.precios__flag{
+  display:inline-flex; align-items:center; gap:10px; margin:22px 0 0;
+  padding:10px 16px; border-radius:100px;
+  border:1px solid rgba(0,212,170,.32); background:rgba(0,212,170,.07);
+  /* !important no: basta con ganar en especificidad a `.section-head p`,
+     que si no impone su clamp(15px,1.6vw,17px) y descuadra la píldora */
+  font-family:var(--f-mono); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--g); font-weight:500; line-height:1.4;
+}
+.section-head .precios__flag{ font-size:12.5px; }
+.precios__flag svg{ width:16px; height:16px; flex:none; }
+.precios__grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
+.precio{
+  display:flex; flex-direction:column; padding:26px 24px 24px;
+  border:1px solid var(--line); border-radius:var(--radius); background:var(--bg-3);
+  transition:border-color .3s var(--ease);
+}
+.precio:hover{ border-color:var(--line-2); }
+.precio--urg{ border-color:rgba(124,77,255,.28); }
+.precio__head{ display:flex; align-items:center; gap:13px; margin-bottom:20px; }
+.precio__ic{
+  display:flex; align-items:center; justify-content:center; flex:none;
+  width:40px; height:40px; border-radius:11px;
+  background:rgba(124,77,255,.1); border:1px solid rgba(124,77,255,.25);
+}
+.precio__ic svg{ width:20px; height:20px; color:var(--p2); }
+.precio__head h3{ font-size:17.5px; font-weight:600; margin:0; }
+.precio__list{ margin:0; display:grid; gap:0; }
+.precio__list > div{
+  display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+  padding:12px 0; border-top:1px solid var(--line);
+}
+.precio__list > div:first-child{ border-top:none; padding-top:0; }
+.precio__list dt{ font-size:14px; color:var(--text-2); }
+.precio__list dd{
+  margin:0; flex:none; font-family:var(--f-mono); font-size:13.5px; font-weight:600;
+  color:var(--text); white-space:nowrap;
+}
+.precio__nota{ font-size:13.5px; color:var(--muted); margin:18px 0 16px; padding-top:16px; border-top:1px solid var(--line); }
+.precio--urg .btn{ width:100%; }
+.precios__note{
+  margin:26px 0 0; padding:18px 22px; border-radius:var(--radius-s);
+  border:1px dashed var(--line-2); background:var(--bg-3);
+  font-size:14px; color:var(--muted);
+}
+.precios__note strong{ color:var(--text-2); font-weight:600; }
+
+/* =========================================================================
+   NAV — sección activa (scroll-spy de main.js)
+   ========================================================================= */
+.nav a.active{ color:var(--text); }
+.nav a.active::after{ width:100%; }
+
+/* =========================================================================
+   DANI · AGENDA — calendario de día y franjas de hora
+   El calendario vive dentro del hilo del chat, así que hereda su ancho:
+   7 columnas de ~42px en la ventana de 380px, por encima del objetivo
+   táctil mínimo. Domingos y días pasados salen deshabilitados.
+   ========================================================================= */
+.bot-cal{
+  align-self:stretch; padding:13px; border-radius:14px;
+  border:1px solid var(--line-2); background:var(--bg-3);
+  animation:msgIn .35s var(--ease);
+}
+@media (prefers-reduced-motion: reduce){ .bot-cal{ animation:none; } }
+.bot-cal.locked{ opacity:.7; }
+.bot-cal__head{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:12px; }
+.bot-cal__title{ font-family:var(--f-mono); font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--text-2); }
+.bot-cal__nav{
+  width:30px; height:30px; flex:none; border-radius:8px; font-size:16px; line-height:1;
+  border:1px solid var(--line-2); background:transparent; color:var(--text-2);
+  transition:border-color .25s var(--ease), color .25s var(--ease);
+}
+.bot-cal__nav:hover:not(:disabled){ border-color:var(--p); color:var(--p2); }
+.bot-cal__nav:disabled{ opacity:.3; cursor:default; }
+.bot-cal__grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:4px; }
+.bot-cal__dow{ margin-bottom:5px; }
+.bot-cal__dow span{ font-family:var(--f-mono); font-size:11px; text-align:center; color:var(--steel); }
+.bot-cal__day{
+  aspect-ratio:1; min-height:36px; display:flex; align-items:center; justify-content:center;
+  border-radius:8px; border:1px solid transparent; background:transparent;
+  font-family:var(--f-mono); font-size:13px; color:var(--text-2);
+  transition:background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+}
+.bot-cal__day:hover:not(:disabled){ background:rgba(124,77,255,.14); border-color:var(--p); color:var(--text); }
+/* los días no disponibles siguen siendo legibles (no son "invisibles"),
+   pero se leen claramente como apagados. Un control deshabilitado queda
+   fuera del mínimo de contraste de la 1.4.3, así que aquí prima que se
+   distinga del día seleccionable, no el ratio. */
+.bot-cal__day:disabled{ color:rgba(159,179,200,.4); cursor:default; }
+.bot-cal__day.empty{ border:none; }
+.bot-cal__day.sel{ background:var(--p); border-color:var(--p); color:#fff; font-weight:700; }
+
+.bot-slots{ align-self:stretch; display:flex; flex-wrap:wrap; gap:7px; }
+.bot-slots.locked{ opacity:.7; }
+.chip[disabled]{ cursor:default; }
+.chip.sel{ background:var(--p); border-color:var(--p); color:#fff; font-weight:600; }
+
+/* resumen de la cita dentro de la tarjeta de cierre (--text-2 sobre el
+   fondo verdoso de la tarjeta: 10.56:1) */
+.bot-done__cita{
+  display:flex; align-items:flex-start; gap:8px;
+  margin:11px 0 0; padding-top:11px; border-top:1px solid rgba(0,212,170,.22);
+  font-size:13px; line-height:1.5; color:var(--text-2);
+}
+.bot-done__cita svg{ width:14px; height:14px; flex:none; color:var(--g); margin-top:3px; }
+
+/* =========================================================================
    RESPONSIVE — 900 / 600
    ========================================================================= */
 @media (max-width:900px){
@@ -614,6 +824,11 @@ body.bot-open .bot-win{ opacity:1; visibility:visible; transform:translateY(0) s
   .reviews__grid{ grid-template-columns:1fr; }
   .footer__grid{ grid-template-columns:1fr 1fr; gap:32px; }
   .stats__grid{ grid-template-columns:1fr; }
+  /* la marca de agua se cruzaría con los titulares: fuera en tablet y móvil */
+  .bignum{ display:none; }
+  .proceso__grid{ grid-template-columns:repeat(2,1fr); }
+  .areas__grid{ grid-template-columns:1fr; }
+  .precios__grid{ grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:600px){
   :root{ --gutter:18px; }
@@ -629,6 +844,11 @@ body.bot-open .bot-win{ opacity:1; visibility:visible; transform:translateY(0) s
   .cta__actions .btn{ width:100%; }
   .bot-win{ right:10px; width:calc(100vw - 20px); }
   .bot-fab{ right:14px; }
+  .proceso__grid{ grid-template-columns:1fr; }
+  .precios__grid{ grid-template-columns:1fr; }
+  .precios__flag{ letter-spacing:.06em; font-size:11.5px; padding:9px 14px; }
+  .precio__list dt{ font-size:13.5px; }
+  .precio__list > div{ gap:10px; }
 }
 
 /* =========================================================================

@@ -20,10 +20,27 @@
 ## Zona de trabajo
 Majadahonda y Madrid Oeste: Pozuelo de Alarcón, Las Rozas, Boadilla del Monte, Villaviciosa de Odón, Villanueva de la Cañada, Las Matas, Aravaca y Madrid capital. Las reformas se realizan en toda la Comunidad de Madrid.
 
+## Precios orientativos
+Ninguna de estas cifras es una tarifa cerrada: son referencias de partida, sin IVA, para hacerse una idea del orden de magnitud. El importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.
+- Reforma integral de vivienda: desde 450 €/m².
+- Reforma de baño completa: desde 3.900 €. Cambio de bañera por plato de ducha: desde 1.450 €.
+- Reforma de cocina completa: desde 4.900 €.
+- Pintura de vivienda: desde 9 €/m².
+- Electricidad: punto de luz o enchufe desde 45 €, cambio de cuadro desde 320 €, boletín eléctrico desde 150 €, avería desde 45 €/h, instalación completa de vivienda desde 1.900 €.
+- Fontanería: localización de fuga desde 90 €, cambio de grifería desde 70 €, termo eléctrico instalado desde 220 €, sustitución de sanitario desde 120 €, cambio de tuberías desde 1.200 €.
+- Urgencias: salida y diagnóstico desde 90 €, fuga de agua o desatasco desde 120 €.
+
 ## Cómo se trabaja
 - Reformas: siempre con visita previa sin coste, medición y presupuesto por escrito con partidas y plazo.
 - Electricidad y fontanería: averías y fugas se atienden como urgencia, sin esperar a la cola de la obra.
 - Boletín eléctrico (certificado de instalación eléctrica) cuando la instalación lo requiere.
+- Cuatro pasos: visita y medición → presupuesto por escrito → ejecución con un único interlocutor → entrega, retirada de escombros y repaso.
+
+## Cómo reservar la visita
+- El asistente "Dani" recoge la solicitud en la propia web: servicio, zona, día de visita, franja horaria, nombre y teléfono.
+- Horario de visitas: lunes a viernes de 8:00 a 20:00 y sábados de 9:00 a 14:00. Domingos cerrado.
+- Después de reservar, se llama al teléfono facilitado para confirmar la visita y dar el presupuesto.
+- Urgencias: no pasan por el calendario. Se atienden llamando al +34 643 199 580, con confirmación de la hora de llegada en el momento.
 
 ## Garantías
 - Presupuesto cerrado: lo presupuestado es lo que se paga; los imprevistos se hablan antes de ejecutarlos.

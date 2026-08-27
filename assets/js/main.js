@@ -46,6 +46,36 @@
   $$(".mobile-nav a, .mobile-nav .btn").forEach((a) => a.addEventListener("click", () => setMenu(false)));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
+  /* ---------- Scroll-spy del nav ----------
+     Con IntersectionObserver y una banda estrecha en mitad del viewport,
+     no con un listener de scroll: leer scrollY/offsetTop en cada evento
+     fuerza reflow, que es justo lo que ya nos costó ~130 ms en el header. */
+  const navLinks = $$(".nav a[href^='#']");
+  if (navLinks.length && "IntersectionObserver" in window) {
+    const targets = navLinks
+      .map((a) => ({ a, sec: document.querySelector(a.getAttribute("href")) }))
+      .filter((t) => t.sec);
+    const visibles = new Set();
+    const paint = () => {
+      let activa = null;
+      targets.forEach((t) => {
+        if (!visibles.has(t.sec)) return;
+        /* si hay varias en la banda, gana la que esté más abajo del documento */
+        if (!activa || (t.sec.compareDocumentPosition(activa.sec) & Node.DOCUMENT_POSITION_PRECEDING)) {
+          activa = t;
+        }
+      });
+      targets.forEach((t) => t.a.classList.toggle("active", t === activa));
+    };
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) visibles.add(e.target); else visibles.delete(e.target);
+      });
+      paint();
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    targets.forEach((t) => spy.observe(t.sec));
+  }
+
   /* ---------- Palabra rotativa del hero ---------- */
   const rotEl = $(".rotator__word");
   if (rotEl) {
