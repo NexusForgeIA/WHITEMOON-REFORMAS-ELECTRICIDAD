@@ -8,7 +8,12 @@ import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 // server-side. Regla fija del proyecto: TODA demo con agente IA avisa por
 // Telegram (regla-aviso-telegram.md). Mismo patron que mudanzas-notify.
 //
-// Recibe (POST JSON): { nombre, telefono, sector, servicio, zona, urgente, origen }.
+// Recibe (POST JSON):
+//   { nombre, telefono, sector, servicio, zona, urgente, origen,
+//     cita_dia, cita_hora }
+// cita_dia/cita_hora llegan de la agenda de Dani (calendario + franja). La
+// rama de urgencia no agenda visita, asi que ahi llegan vacios y la linea
+// "Visita" no se imprime.
 //
 // Secrets usados (nunca en cliente):
 //   - TELEGRAM_BOT_TOKEN : token del bot de Telegram
@@ -48,11 +53,18 @@ Deno.serve(async (req: Request) => {
   const zona = String(data.zona ?? "").trim();
   const origen = String(data.origen ?? "demo-reformas-electricidad").trim();
   const urgente = data.urgente === true || String(data.urgente ?? "") === "true";
+  const citaDia = String(data.cita_dia ?? "").trim();
+  const citaHora = String(data.cita_hora ?? "").trim();
 
   // Guard de lead incompleto — estandar WhiteMoon.
   if (!nombre || !telefono) {
     return json({ ok: false, error: "lead incompleto" }, 400);
   }
+
+  // La visita solo aparece si Dani llegó a agendarla (rama no urgente).
+  const visita = (citaDia || citaHora)
+    ? `\n📅 Visita: ${citaDia || "-"}${citaHora ? ` a las ${citaHora}` : ""}`
+    : "";
 
   const message =
     (urgente ? "🚨 URGENCIA" : "🔔 Nuevo lead") +
@@ -60,7 +72,7 @@ Deno.serve(async (req: Request) => {
     `Nombre: ${nombre || "-"}\n` +
     `Teléfono: ${telefono || "-"}\n` +
     `Servicio: ${servicio || "-"}\n` +
-    `Zona: ${zona || "-"}`;
+    `Zona: ${zona || "-"}` + visita;
 
   let notified = false;
   try {

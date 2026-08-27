@@ -84,12 +84,36 @@
   ],
   "sameAs": ["https://whitemoon.es"],
   "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas integrales" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas de baño" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas de cocina" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electricidad: instalaciones, boletines y averías" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fontanería: fugas, calentadores y sanitarios" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Urgencias eléctricas y de fontanería" } }
+    {
+      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas integrales" },
+      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
+      "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "EUR", "minPrice": "450", "unitText": "m²", "valueAddedTaxIncluded": false }
+    },
+    {
+      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas de baño" },
+      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
+      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "3900", "valueAddedTaxIncluded": false }
+    },
+    {
+      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas de cocina" },
+      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
+      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "4900", "valueAddedTaxIncluded": false }
+    },
+    {
+      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electricidad: instalaciones, boletines y averías" },
+      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
+      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "45", "valueAddedTaxIncluded": false }
+    },
+    {
+      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fontanería: fugas, calentadores y sanitarios" },
+      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
+      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "60", "valueAddedTaxIncluded": false }
+    },
+    {
+      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Urgencias eléctricas y de fontanería" },
+      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
+      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "90", "valueAddedTaxIncluded": false }
+    }
   ]
 }
 </script>
@@ -103,6 +127,10 @@
     { "@type": "Question", "name": "¿Tramitáis el boletín eléctrico?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Hacemos instalaciones eléctricas y tramitamos el boletín (certificado de instalación eléctrica) cuando la instalación lo requiere." } },
     { "@type": "Question", "name": "¿Cuánto tarda una reforma de baño?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance: cambiar sanitarios no es lo mismo que rehacer alicatado, fontanería y electricidad. En el presupuesto te damos un plazo cerrado antes de empezar." } },
     { "@type": "Question", "name": "¿Os encargáis también de los materiales?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Podemos llevar la reforma completa (albañilería, electricidad, fontanería y acabados) con los materiales incluidos, o trabajar solo la mano de obra si prefieres comprarlos tú." } },
+    { "@type": "Question", "name": "¿Los precios que aparecen en la web son cerrados?", "acceptedAnswer": { "@type": "Answer", "text": "No. Son precios orientativos, para que puedas hacerte una idea del orden de magnitud. El importe real depende de la superficie, las calidades y el estado de la instalación, y se cierra en el presupuesto por escrito después de la visita, que es sin compromiso." } },
+    { "@type": "Question", "name": "¿Cómo reservo la visita?", "acceptedAnswer": { "@type": "Answer", "text": "Habla con Dani, nuestro asistente. Eliges el servicio y la zona, escoges el día en el calendario y la franja horaria que te venga bien, y nos dejas tu nombre y tu teléfono. Te llamamos para confirmar la visita y darte el presupuesto." } },
+    { "@type": "Question", "name": "¿Qué horario tenéis para las visitas?", "acceptedAnswer": { "@type": "Answer", "text": "De lunes a viernes de 8:00 a 20:00 y los sábados de 9:00 a 14:00. Los domingos no hacemos visitas de presupuesto, aunque las urgencias de luz y agua se atienden llamando por teléfono." } },
+    { "@type": "Question", "name": "Tengo una urgencia ahora mismo, ¿también hay que pedir cita?", "acceptedAnswer": { "@type": "Answer", "text": "No. Si te has quedado sin luz o tienes una fuga, lo más rápido es llamar al 643 199 580: no pasa por el calendario de visitas y te confirmamos la hora de llegada al momento." } },
     { "@type": "Question", "name": "¿En qué zonas trabajáis?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos en Majadahonda y Madrid Oeste (Pozuelo, Las Rozas, Boadilla, Villaviciosa de Odón…) y hacemos reformas en toda la Comunidad de Madrid." } }
   ]
 }
@@ -114,8 +142,9 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/" },
     { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#servicios" },
-    { "@type": "ListItem", "position": 3, "name": "Zonas", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#zonas" },
-    { "@type": "ListItem", "position": 4, "name": "Contacto", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#contacto" }
+    { "@type": "ListItem", "position": 3, "name": "Precios", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#precios" },
+    { "@type": "ListItem", "position": 4, "name": "Zonas", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#zonas" },
+    { "@type": "ListItem", "position": 5, "name": "Contacto", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#contacto" }
   ]
 }
 </script>
@@ -177,6 +206,7 @@
     <nav class="nav" aria-label="Principal">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
       <a href="#nosotros">Sobre nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -196,6 +226,7 @@
   <nav aria-label="Menú móvil">
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Servicios</a>
+    <a href="#precios">Precios</a>
     <a href="#nosotros">Sobre nosotros</a>
     <a href="#zonas">Zonas</a>
     <a href="#contacto">Contacto</a>
@@ -281,6 +312,7 @@
 
 <!-- ===================== SOBRE NOSOTROS ===================== -->
 <section class="about" id="nosotros">
+  <span class="bignum bignum--r" aria-hidden="true">01</span>
   <div class="wrap">
     <div class="about__grid">
       <div class="about__media reveal">
@@ -327,6 +359,7 @@
 
 <!-- ===================== SERVICIOS ===================== -->
 <section class="services" id="servicios">
+  <span class="bignum bignum--l" aria-hidden="true">02</span>
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Servicios</span>
@@ -336,27 +369,27 @@
     <div class="services__grid">
       <article class="svc reveal">
         <div class="svc__media"><img src="assets/svc-reformas-integrales.jpg" srcset="assets/svc-reformas-integrales-480.jpg 480w, assets/svc-reformas-integrales.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Vivienda en obra con tabiques abiertos y un operario trabajando sobre un andamio" width="800" height="450" loading="lazy"><span class="svc__num">01</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span></div>
-        <div class="svc__body"><h3>Reformas integrales</h3><p>Viviendas y locales de principio a fin: distribución, albañilería, instalaciones y acabados.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
+        <div class="svc__body"><h3>Reformas integrales</h3><p>Viviendas y locales de principio a fin: distribución, albañilería, instalaciones y acabados.</p><div class="svc__price">desde <b>450 €/m²</b><small>orientativo</small></div><button type="button" class="svc__link" data-bot data-servicio="Reforma integral">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div>
       </article>
       <article class="svc reveal" data-delay="80">
         <div class="svc__media"><img src="assets/svc-bano.jpg" srcset="assets/svc-bano-480.jpg 480w, assets/svc-bano.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Baño reformado con ducha de obra, mampara de cristal y mueble con doble lavabo" width="800" height="450" loading="lazy"><span class="svc__num">02</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bath"/></svg></span></div>
-        <div class="svc__body"><h3>Reformas de baño</h3><p>Cambio de bañera por plato de ducha, alicatado, sanitarios y fontanería nueva.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
+        <div class="svc__body"><h3>Reformas de baño</h3><p>Cambio de bañera por plato de ducha, alicatado, sanitarios y fontanería nueva.</p><div class="svc__price">desde <b>3.900 €</b><small>orientativo</small></div><button type="button" class="svc__link" data-bot data-servicio="Reforma de baño">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div>
       </article>
       <article class="svc reveal" data-delay="160">
         <div class="svc__media"><img src="assets/svc-cocina.jpg" srcset="assets/svc-cocina-480.jpg 480w, assets/svc-cocina.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Cocina reformada con muebles blancos, isla y electrodomésticos de acero inoxidable" width="800" height="450" loading="lazy"><span class="svc__num">03</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-kitchen"/></svg></span></div>
-        <div class="svc__body"><h3>Reformas de cocina</h3><p>Muebles, encimera, campana y toda la instalación de agua y electricidad al día.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
+        <div class="svc__body"><h3>Reformas de cocina</h3><p>Muebles, encimera, campana y toda la instalación de agua y electricidad al día.</p><div class="svc__price">desde <b>4.900 €</b><small>orientativo</small></div><button type="button" class="svc__link" data-bot data-servicio="Reforma de cocina">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div>
       </article>
       <article class="svc reveal">
         <div class="svc__media"><img src="assets/svc-electricidad.jpg" srcset="assets/svc-electricidad-480.jpg 480w, assets/svc-electricidad.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Electricista comprobando con un multímetro los automáticos de un cuadro eléctrico" width="800" height="450" loading="lazy"><span class="svc__num">04</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span></div>
-        <div class="svc__body"><h3>Electricidad</h3><p>Instalaciones nuevas, cambio de cuadro, boletín eléctrico y reparación de averías.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
+        <div class="svc__body"><h3>Electricidad</h3><p>Instalaciones nuevas, cambio de cuadro, boletín eléctrico y reparación de averías.</p><div class="svc__price">desde <b>45 €</b><small>orientativo</small></div><button type="button" class="svc__link" data-bot data-servicio="Electricidad">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div>
       </article>
       <article class="svc reveal" data-delay="80">
         <div class="svc__media"><img src="assets/svc-fontaneria.jpg" srcset="assets/svc-fontaneria-480.jpg 480w, assets/svc-fontaneria.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Fontanero reparando el sifón y las llaves de paso bajo el mueble de un lavabo" width="800" height="450" loading="lazy"><span class="svc__num">05</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span></div>
-        <div class="svc__body"><h3>Fontanería</h3><p>Fugas y humedades, calentadores y termos, grifería, sanitarios y cambio de tuberías.</p><a class="svc__link" href="#contacto">Pedir presupuesto<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
+        <div class="svc__body"><h3>Fontanería</h3><p>Fugas y humedades, calentadores y termos, grifería, sanitarios y cambio de tuberías.</p><div class="svc__price">desde <b>60 €</b><small>orientativo</small></div><button type="button" class="svc__link" data-bot data-servicio="Fontanería">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div>
       </article>
       <article class="svc reveal" data-delay="160">
         <div class="svc__media"><img src="assets/svc-urgencias.jpg" srcset="assets/svc-urgencias-480.jpg 480w, assets/svc-urgencias.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 370px" alt="Operario sujetando un cable eléctrico pelado con guantes de protección" width="800" height="450" loading="lazy"><span class="svc__num">06</span><span class="svc__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span></div>
-        <div class="svc__body"><h3>Urgencias eléctricas y de fontanería</h3><p>Te has quedado sin luz o tienes una fuga: lo atendemos como urgencia, no como obra.</p><a class="svc__link" href="tel:+34643199580">Llamar ahora<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
+        <div class="svc__body"><h3>Urgencias eléctricas y de fontanería</h3><p>Te has quedado sin luz o tienes una fuga: lo atendemos como urgencia, no como obra.</p><div class="svc__price">desde <b>90 €</b><small>salida orientativa</small></div><a class="svc__link" href="tel:+34643199580">Llamar ahora<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div>
       </article>
     </div>
   </div>
@@ -373,8 +406,147 @@
   </div>
 </section>
 
+<!-- ===================== CÓMO TRABAJAMOS ===================== -->
+<section class="proceso sec-alt" id="proceso">
+  <span class="bignum bignum--l" aria-hidden="true">03</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>De la visita a la entrega, sin sorpresas</h2>
+      <p>El orden es el mismo en una reforma integral que en un cambio de cuadro: primero se mira, después se presupuesta y solo entonces se toca la pared.</p>
+    </div>
+    <ol class="proceso__grid">
+      <li class="paso reveal">
+        <span class="paso__n" aria-hidden="true">01</span>
+        <span class="paso__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg></span>
+        <h3>Visita y medición</h3>
+        <p>Pasamos a ver la vivienda o el local sin coste. Medimos, revisamos el estado de la instalación eléctrica y de fontanería y escuchamos qué tienes en la cabeza.</p>
+      </li>
+      <li class="paso reveal" data-delay="80">
+        <span class="paso__n" aria-hidden="true">02</span>
+        <span class="paso__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg></span>
+        <h3>Presupuesto por escrito</h3>
+        <p>Te lo damos por partidas y con plazo, para que sepas qué entra y qué no. Sin compromiso: solo avanzamos si te encaja.</p>
+      </li>
+      <li class="paso reveal" data-delay="160">
+        <span class="paso__n" aria-hidden="true">03</span>
+        <span class="paso__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tools"/></svg></span>
+        <h3>Ejecución con un interlocutor</h3>
+        <p>Albañilería, electricidad y fontanería las lleva el mismo equipo. Hablas siempre con la misma persona y los gremios no se pisan entre sí.</p>
+      </li>
+      <li class="paso reveal" data-delay="240">
+        <span class="paso__n" aria-hidden="true">04</span>
+        <span class="paso__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>
+        <h3>Entrega y repaso</h3>
+        <p>Retiramos escombros, limpiamos y repasamos contigo el trabajo. Si la instalación lo requiere, te entregamos el boletín eléctrico.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== ÁREAS / ESPECIALIDADES ===================== -->
+<section class="areas" id="areas">
+  <span class="bignum bignum--r" aria-hidden="true">04</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Áreas de trabajo</span>
+      <h2>Tres oficios, un solo equipo</h2>
+      <p>Cada área tiene su especialista, pero el presupuesto, el plazo y el interlocutor son los mismos.</p>
+    </div>
+    <div class="areas__grid">
+      <article class="area reveal">
+        <span class="area__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span>
+        <h3>Reformas</h3>
+        <p>Viviendas y locales de principio a fin, o solo la pieza que te falta: el baño, la cocina o esa pared que sobra.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Distribución, tabiquería y albañilería</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Baños y cocinas completos</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Alicatado, solado, pintura y acabados</li>
+        </ul>
+      </article>
+      <article class="area reveal" data-delay="80">
+        <span class="area__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span>
+        <h3>Electricidad</h3>
+        <p>Instalaciones nuevas y reparaciones, con la documentación en regla cuando la instalación lo exige.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Cuadros, automáticos y diferenciales</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Puntos de luz, enchufes y circuitos nuevos</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Boletín eléctrico y localización de averías</li>
+        </ul>
+      </article>
+      <article class="area reveal" data-delay="160">
+        <span class="area__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span>
+        <h3>Fontanería</h3>
+        <p>Del goteo que mancha el techo del vecino al cambio completo de tuberías de una vivienda.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Localización de fugas y humedades</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Calentadores, termos y grifería</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Sanitarios y cambio de tuberías</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRECIOS ORIENTATIVOS ===================== -->
+<section class="precios sec-alt" id="precios">
+  <span class="bignum bignum--l" aria-hidden="true">05</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Precios</span>
+      <h2>Una referencia para hacerte una idea</h2>
+      <p>Estas cifras sirven para situarte, no para cerrar una obra. El precio real depende de la superficie, las calidades y el estado de la instalación, y se fija en el presupuesto tras la visita.</p>
+      <p class="precios__flag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg>Orientativo · presupuesto sin compromiso</p>
+    </div>
+    <div class="precios__grid">
+      <article class="precio reveal">
+        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span><h3>Reformas</h3></div>
+        <dl class="precio__list">
+          <div><dt>Reforma integral de vivienda</dt><dd>desde 450 €/m²</dd></div>
+          <div><dt>Reforma de baño completa</dt><dd>desde 3.900 €</dd></div>
+          <div><dt>Reforma de cocina completa</dt><dd>desde 4.900 €</dd></div>
+          <div><dt>Cambio de bañera por plato de ducha</dt><dd>desde 1.450 €</dd></div>
+          <div><dt>Pintura de vivienda</dt><dd>desde 9 €/m²</dd></div>
+        </dl>
+      </article>
+      <article class="precio reveal" data-delay="80">
+        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span><h3>Electricidad</h3></div>
+        <dl class="precio__list">
+          <div><dt>Punto de luz o enchufe nuevo</dt><dd>desde 45 €</dd></div>
+          <div><dt>Cambio de cuadro eléctrico</dt><dd>desde 320 €</dd></div>
+          <div><dt>Boletín eléctrico</dt><dd>desde 150 €</dd></div>
+          <div><dt>Localización y reparación de avería</dt><dd>desde 45 €/h</dd></div>
+          <div><dt>Instalación completa de vivienda</dt><dd>desde 1.900 €</dd></div>
+        </dl>
+      </article>
+      <article class="precio reveal" data-delay="160">
+        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span><h3>Fontanería</h3></div>
+        <dl class="precio__list">
+          <div><dt>Localización de fuga</dt><dd>desde 90 €</dd></div>
+          <div><dt>Cambio de grifería</dt><dd>desde 70 €</dd></div>
+          <div><dt>Termo eléctrico instalado</dt><dd>desde 220 €</dd></div>
+          <div><dt>Sustitución de sanitario</dt><dd>desde 120 €</dd></div>
+          <div><dt>Cambio de tuberías de vivienda</dt><dd>desde 1.200 €</dd></div>
+        </dl>
+      </article>
+      <article class="precio precio--urg reveal" data-delay="240">
+        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span><h3>Urgencias</h3></div>
+        <dl class="precio__list">
+          <div><dt>Salida y diagnóstico</dt><dd>desde 90 €</dd></div>
+          <div><dt>Urgencia eléctrica sin luz</dt><dd>desde 90 €</dd></div>
+          <div><dt>Fuga de agua o desatasco</dt><dd>desde 120 €</dd></div>
+        </dl>
+        <p class="precio__nota">Las urgencias no entran en la cola de la obra: se atienden aparte. Si te has quedado sin luz o tienes una fuga, llama y te confirmamos la hora de llegada.</p>
+        <a class="btn btn--ghost btn--sm" href="tel:+34643199580"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
+      </article>
+    </div>
+    <p class="precios__note reveal">Precios <strong>orientativos</strong>, con IVA aparte y a título de demostración. No son tarifas cerradas: el importe final se fija en el presupuesto por escrito, que es <strong>sin compromiso</strong>.</p>
+  </div>
+</section>
+
 <!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
 <section class="why">
+  <span class="bignum bignum--r" aria-hidden="true">06</span>
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Por qué elegirnos</span>
@@ -391,6 +563,7 @@
 
 <!-- ===================== ZONA ===================== -->
 <section class="zone" id="zonas">
+  <span class="bignum bignum--l" aria-hidden="true">07</span>
   <div class="wrap">
     <div class="zone__grid">
       <div>
@@ -459,6 +632,7 @@
 
 <!-- ===================== FAQ ===================== -->
 <section class="faq">
+  <span class="bignum bignum--r" aria-hidden="true">08</span>
   <div class="wrap">
     <div class="faq__grid">
       <div>
@@ -474,6 +648,10 @@
         <details class="faq__item"><summary>¿Tramitáis el boletín eléctrico?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">Sí. Hacemos instalaciones eléctricas y tramitamos el boletín (certificado de instalación eléctrica) cuando la instalación lo requiere.</div></details>
         <details class="faq__item"><summary>¿Cuánto tarda una reforma de baño?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">Depende del alcance: cambiar sanitarios no es lo mismo que rehacer alicatado, fontanería y electricidad. En el presupuesto te damos un plazo cerrado antes de empezar.</div></details>
         <details class="faq__item"><summary>¿Os encargáis también de los materiales?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">Sí. Podemos llevar la reforma completa (albañilería, electricidad, fontanería y acabados) con los materiales incluidos, o trabajar solo la mano de obra si prefieres comprarlos tú.</div></details>
+        <details class="faq__item"><summary>¿Los precios que aparecen en la web son cerrados?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">No. Son precios orientativos, para que puedas hacerte una idea del orden de magnitud. El importe real depende de la superficie, las calidades y el estado de la instalación, y se cierra en el presupuesto por escrito después de la visita, que es sin compromiso.</div></details>
+        <details class="faq__item"><summary>¿Cómo reservo la visita?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">Habla con Dani, nuestro asistente. Eliges el servicio y la zona, escoges el día en el calendario y la franja horaria que te venga bien, y nos dejas tu nombre y tu teléfono. Te llamamos para confirmar la visita y darte el presupuesto.</div></details>
+        <details class="faq__item"><summary>¿Qué horario tenéis para las visitas?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">De lunes a viernes de 8:00 a 20:00 y los sábados de 9:00 a 14:00. Los domingos no hacemos visitas de presupuesto, aunque las urgencias de luz y agua se atienden llamando por teléfono.</div></details>
+        <details class="faq__item"><summary>Tengo una urgencia ahora mismo, ¿también hay que pedir cita?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">No. Si te has quedado sin luz o tienes una fuga, lo más rápido es llamar al 643 199 580: no pasa por el calendario de visitas y te confirmamos la hora de llegada al momento.</div></details>
         <details class="faq__item"><summary>¿En qué zonas trabajáis?<span class="plus" aria-hidden="true"></span></summary><div class="faq__body">Trabajamos en Majadahonda y Madrid Oeste (Pozuelo, Las Rozas, Boadilla, Villaviciosa de Odón…) y hacemos reformas en toda la Comunidad de Madrid.</div></details>
       </div>
     </div>
@@ -500,6 +678,7 @@
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#precios">Precios</a></li>
           <li><a href="#nosotros">Sobre nosotros</a></li>
           <li><a href="#zonas">Zonas</a></li>
           <li><a href="#contacto">Contacto</a></li>
