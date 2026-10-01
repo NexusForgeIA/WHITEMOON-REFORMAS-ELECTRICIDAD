@@ -10,11 +10,11 @@ GitHub Pages, con un agente IA que capta leads reales.
 
 | Ruta | Qué es |
 |---|---|
-| `index.html` | Página completa: topbar, header, hero, servicios, zonas, FAQ, footer y el agente. |
-| `assets/css/style.css` | Design system WhiteMoon (`#7c4dff` sobre `#08080d`/`#0e0e16`/`#13131e`) y responsive 900/600. |
-| `assets/js/main.js` | Interacciones: menú móvil, rotador del hero, scroll reveal y canvas del hero. |
+| `index.html` | Página completa con la estructura de la demo de inmobiliarias: franja de demo, nav fija, hero con foto a sangre, parrilla de servicios, proceso, Dani, precios, zonas, FAQ, contacto, footer y el agente. |
+| `assets/css/style.css` | Paleta de obra (amarillo `#f5b700` sobre `#0e0f11`/`#131417`/`#17181b`; naranja `#ff7a1a` solo para urgencias), Fraunces + Sora y responsive 900/600. |
+| `assets/js/main.js` | Interacciones: menú móvil, scroll-spy, rotador del hero y scroll reveal (con revelado al entrar por ancla). |
 | `assets/js/dani.js` | Agente "Dani": árbol de conversación, alta del lead y aviso al equipo. |
-| `assets/*.jpg` | Fotos del hero, de los seis servicios y de la sección "sobre nosotros". |
+| `assets/*.jpg` · `assets/*.webp` | Fotos del hero, de los seis servicios y de la sección "sobre nosotros", en WebP con JPG de respaldo. |
 | `supabase/functions/reformas-notify/` | Edge Function que envía el aviso de WhatsApp. |
 | `robots.txt` · `llms.txt` · `sitemap.xml` | SEO/GEO/AEO. |
 
