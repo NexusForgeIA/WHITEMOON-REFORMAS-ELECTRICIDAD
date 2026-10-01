@@ -1,25 +1,23 @@
 # Fuentes autoalojadas
 
-| Fichero | Familia | Subconjunto |
-|---|---|---|
-| `sora-latin.woff2` · `sora-latin-ext.woff2` | Sora (variable, 200–700) | latin · latin-ext |
-| `space-grotesk-latin.woff2` · `space-grotesk-latin-ext.woff2` | Space Grotesk (variable, 400–700) | latin · latin-ext |
+| Fichero | Familia | Pesos | Subconjunto |
+|---|---|---|---|
+| `fraunces-600-latin.woff2` | Fraunces | 600 | latin |
+| `sora-400-latin.woff2` · `sora-400-latin-ext.woff2` | Sora (variable) | 400–800 | latin · latin-ext |
 
 Ambas familias están publicadas bajo la **SIL Open Font License 1.1**, que
 permite el uso, la modificación y la redistribución, incluida la
-incorporación a una web. Los ficheros son los `woff2` que sirve Google
-Fonts (Sora v17, Space Grotesk v22), descargados y servidos desde el
-propio dominio.
+incorporación a una web. Son los mismos `woff2` que usa la demo de
+inmobiliarias, servidos desde el propio dominio: cero peticiones a Google Fonts.
 
-Se autoalojan por dos motivos:
+Fraunces se usa solo en los titulares grandes (h1/h2) y solo existe el 600:
+pedir 700 haría que el navegador lo engordara sintéticamente.
 
-1. **CLS.** Con la hoja de Google Fonts cargada en asíncrono, la fuente
-   llegaba después del primer pintado y el `swap` reflotaba el hero: en una
-   medición de Lighthouse móvil eso costó 0,33 de CLS. Con el `woff2` en el
-   mismo dominio y precargado, el texto se pinta ya con Sora.
-2. **Latencia.** Se ahorran dos conexiones nuevas
-   (`fonts.googleapis.com` para el CSS y `fonts.gstatic.com` para el
-   `woff2`), que en móvil throttleado eran varios cientos de milisegundos.
+Sora es una fuente variable. En la demo de inmobiliarias los ficheros
+`sora-400` … `sora-800` son **el mismo binario byte a byte**; aquí se sirve uno
+solo y el `@font-face` declara `font-weight:400 800`, para que el navegador no
+descargue cinco veces el mismo fichero.
 
-Solo se precargan los subconjuntos `latin`; los `latin-ext` se piden únicamente
-si alguna página necesita esos glifos.
+Se precargan `sora-400-latin.woff2` y `fraunces-600-latin.woff2`, para que el
+hero se pinte ya con su tipografía y el `swap` no lo reflote (CLS). El
+`latin-ext` solo se pide si alguna página necesita esos glifos.
