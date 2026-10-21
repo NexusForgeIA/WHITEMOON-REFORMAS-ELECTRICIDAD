@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- ===================== SEO / GEO / AEO ===================== -->
-<title>Reformas, electricidad y fontanería en Madrid · WhiteMoon</title>
-<meta name="description" content="Reformas integrales, baños y cocinas, electricidad y fontanería en Majadahonda y Madrid Oeste. Urgencias y presupuesto sin compromiso.">
+<title>WhiteMoon Reformas — Reformas, electricidad y fontanería en Madrid Oeste</title>
+<meta name="description" content="Reformas integrales, baños y cocinas, electricidad y fontanería en Majadahonda y Madrid Oeste. Visita y presupuesto por escrito sin compromiso. Pide tu visita por el chat.">
 <link rel="canonical" href="https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="noindex, nofollow">
 <meta name="author" content="WhiteMoon">
-<meta name="theme-color" content="#0e0f11">
+<meta name="theme-color" content="#ffffff">
 
 <!-- Geo -->
 <meta name="geo.region" content="ES-MD">
@@ -18,103 +18,208 @@
 <meta name="geo.position" content="40.4730;-3.8720">
 <meta name="ICBM" content="40.4730, -3.8720">
 
-<!-- Open Graph -->
+<!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="WhiteMoon">
+<meta property="og:site_name" content="WhiteMoon Reformas">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Reformas, electricidad y fontanería en Madrid · WhiteMoon">
-<meta property="og:description" content="Reformas integrales, baños y cocinas, electricidad y fontanería en Majadahonda y Madrid Oeste. Urgencias y presupuesto sin compromiso.">
+<meta property="og:title" content="WhiteMoon Reformas — Reformas, electricidad y fontanería en Madrid">
+<meta property="og:description" content="Reformas integrales, baños, cocinas, electricidad y fontanería. Visita y presupuesto por escrito sin compromiso.">
 <meta property="og:url" content="https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/">
 <meta property="og:image" content="https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:alt" content="Electricista trabajando en una instalación durante una reforma">
+<meta property="og:image:alt" content="WhiteMoon Reformas — tu reforma o avería en Madrid Oeste, con la visita pedida por el chat">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Reformas, electricidad y fontanería en Madrid · WhiteMoon">
-<meta name="twitter:description" content="Reformas integrales, baños y cocinas, electricidad y fontanería en Majadahonda y Madrid Oeste. Urgencias y presupuesto sin compromiso.">
+<meta name="twitter:title" content="WhiteMoon Reformas — Reformas, electricidad y fontanería en Madrid">
+<meta name="twitter:description" content="Reformas integrales, baños, cocinas, electricidad y fontanería. Visita y presupuesto por escrito sin compromiso.">
 <meta name="twitter:image" content="https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/assets/og.jpg">
 
-<!-- Favicon (llave inglesa + rayo) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e0f11'/%3E%3Cpath d='M18 7a5 5 0 0 0-6.8 6.6L7 18v6h6l4.4-4.4A5 5 0 0 0 24 12.8l-3.2 3.2-3.2-.8-.8-3.2z' fill='none' stroke='%23f5b700' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<!-- Favicon: diente en azul médico -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2333414f'/%3E%3Cpath d='M18 5 9 18h6l-1 9 9-14h-6z' fill='%23f2c15b'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/logo-whitemoon.png">
 
-<!-- LCP candidate del hero -->
-<link rel="preload" as="image" type="image/webp" href="assets/hero-reformas.webp" imagesrcset="assets/hero-reformas-480.webp 480w, assets/hero-reformas.webp 900w" imagesizes="100vw" fetchpriority="high">
+<!-- Fuentes auto-hospedadas (subset latin, ejes de peso recortados a lo que se
+     usa). Cero peticiones a Google Fonts: 39 KB desde el propio origen. -->
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jakarta-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-var.woff2" crossorigin>
 
-<!-- Fuentes autoalojadas: sin round trips a Google y sin reflow por swap tardío -->
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/sora-400-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/fraunces-600-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/hero-bg.jpg" media="(min-width:769px)" fetchpriority="high">
 
-<link rel="stylesheet" href="assets/css/style.css">
+<!-- CSS crítico en línea: el resto de la hoja deja de bloquear el render -->
+<style>
+@font-face{font-family:"Inter var";src:url(assets/fonts/inter-var.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
+@font-face{font-family:"Jakarta var";src:url(assets/fonts/jakarta-var.woff2) format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+:root{--white:#fff;--bone:#f5f6f8;--surface:#fff;--ink:#171d24;--ink-2:#2f3a46;--muted:#5a6673;--blue:#33414f;--blue-deep:#232e39;--blue-lt:#9fb0c2;--blue-chip:#eceff3;--green:#b45309;--green-deep:#8f4207;--green-lt:#f2c15b;--green-chip:#fdf1dc;--line:#e4e7ec;--line-2:#d6dbe2;--sh-sm:0 1px 2px rgba(23,29,36,.05),0 2px 8px rgba(23,29,36,.04);--sh-md:0 2px 6px rgba(23,29,36,.05),0 12px 28px -12px rgba(23,29,36,.14);--sh-lg:0 4px 12px rgba(23,29,36,.06),0 26px 60px -26px rgba(51,65,79,.34);--display:"Jakarta var",system-ui,-apple-system,sans-serif;--body:"Inter var",system-ui,-apple-system,sans-serif;--maxw:1240px;--nav-h:80px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%}
+body{background:var(--white);color:var(--ink-2);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img,video{max-width:100%;display:block}button,input{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);line-height:1.08;letter-spacing:-.022em;font-weight:800}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:-.01em;padding:14px 26px;border-radius:10px;border:1.5px solid transparent;background:var(--blue);color:#fff;cursor:pointer}
+.btn svg{width:19px;height:19px;flex-shrink:0}
+.btn--ghost{background:var(--white);color:var(--blue);border-color:var(--line-2)}
+.btn--sm{padding:11px 20px;font-size:.88rem;border-radius:9px}
+.nav{position:fixed;inset:0 0 auto 0;z-index:900;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--nav-h)}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand__mark{width:46px;height:46px;border-radius:13px;background:var(--blue-chip);border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+.brand__mark img{width:32px;height:auto}
+.brand__txt b{font-family:var(--display);font-weight:800;font-size:1.08rem;color:var(--ink);line-height:1.1;display:block;letter-spacing:-.02em}
+.brand__txt small{font-family:var(--display);font-weight:700;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);display:block;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);position:relative;padding:6px 0}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:11px;border:1px solid var(--line-2);background:var(--white);cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+.mobile-menu{position:fixed;inset:0;z-index:899;background:rgba(255,255,255,.98);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;opacity:0;pointer-events:none}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--bone)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg .wash{position:absolute;inset:0;background:radial-gradient(900px 620px at 88% 14%,rgba(159,176,194,.42),transparent 62%),radial-gradient(760px 620px at 96% 88%,rgba(242,193,91,.36),transparent 64%),linear-gradient(180deg,#fff 0%,#f5f6f8 100%)}
+.hero-bg .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.hero-bg .scrim{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(100deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.955) 34%,rgba(248,249,250,.86) 52%,rgba(236,239,243,.55) 74%,rgba(230,234,239,.42) 100%),linear-gradient(180deg,rgba(255,255,255,.85) 0%,rgba(255,255,255,0) 26%,rgba(255,255,255,0) 62%,rgba(245,246,248,.92) 100%)}
+.hero-bg .dots{position:absolute;inset:0;z-index:3;opacity:.5;background-image:radial-gradient(rgba(51,65,79,.16) 1px,transparent 1px);background-size:26px 26px}
+.hero-content{position:relative;z-index:4;width:100%;padding:calc(var(--nav-h) + 44px) 32px 44px}@media (max-width:620px){.hero-content{padding-left:18px;padding-right:18px}}
+.hero h1{font-size:clamp(2.35rem,5.4vw,4.15rem);max-width:16ch}
+.hero h1 .accent{color:var(--blue);display:block}
+.hero-rot{display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap;margin-top:20px;font-family:var(--display);font-weight:600;font-size:clamp(1rem,2.4vw,1.35rem);color:var(--muted)}
+.hero-rot .rot{color:var(--green);font-weight:800;display:inline-block}
+.hero-desc{max-width:56ch;color:var(--ink-2);font-size:1.05rem;margin-top:22px}
+.hero-desc strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.hero-contact{display:flex;gap:10px 26px;flex-wrap:wrap;margin-top:26px;font-size:.94rem;color:var(--muted)}
+.hero-contact a{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink)}
+.hero-contact svg{width:17px;height:17px;color:var(--blue);flex-shrink:0}
+.reveal{opacity:0;transform:translateY(28px)}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:1080px){.nav-links{display:none}.nav-cta .btn{display:none}.burger{display:grid}}
+@media (max-width:900px){.wrap{padding:0 22px}}
+@media (max-width:768px){.hero-bg .hero-video{display:none!important}}
+@media (max-width:620px){:root{--nav-h:70px}.wrap{padding:0 18px}.hero h1{max-width:none}.hero-actions .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important}.hero-bg .hero-video{display:none!important}}
+</style>
+<link rel="preload" as="style" href="assets/css/style.css?v=20261021" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/style.css?v=20261021"></noscript>
+<link rel="preload" as="style" href="assets/css/holo.css?v=20261021" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/holo.css?v=20261021"></noscript>
 
-<!-- ===================== JSON-LD ===================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": [
+    "GeneralContractor",
+    "Electrician",
+    "Plumber"
+  ],
   "@id": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#business",
   "name": "WhiteMoon Reformas",
-  "description": "Reformas integrales, reformas de baño y de cocina, electricidad (instalaciones, boletines y averías), fontanería (fugas, calentadores y sanitarios) y urgencias eléctricas y de fontanería en Majadahonda y Madrid Oeste, con reformas en toda la Comunidad de Madrid.",
+  "description": "Empresa ficticia de reformas, electricidad y fontanería en Majadahonda y Madrid Oeste: reformas integrales, baños, cocinas, instalaciones eléctricas, fontanería y urgencias. Demo de WhiteMoon Agencia IA.",
   "url": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/",
   "image": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/assets/og.jpg",
   "telephone": "+34643199580",
   "email": "comercial@whitemoon.es",
-  "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Majadahonda",
     "addressRegion": "Comunidad de Madrid",
-    "postalCode": "28220",
     "addressCountry": "ES"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 40.4730, "longitude": -3.8720 },
-  "areaServed": [
-    { "@type": "City", "name": "Majadahonda", "sameAs": "https://www.wikidata.org/wiki/Q427505" },
-    { "@type": "City", "name": "Pozuelo de Alarcón", "sameAs": "https://www.wikidata.org/wiki/Q639422" },
-    { "@type": "City", "name": "Las Rozas de Madrid", "sameAs": "https://www.wikidata.org/wiki/Q592747" },
-    { "@type": "City", "name": "Boadilla del Monte", "sameAs": "https://www.wikidata.org/wiki/Q1641013" },
-    { "@type": "City", "name": "Villaviciosa de Odón", "sameAs": "https://www.wikidata.org/wiki/Q1631897" },
-    { "@type": "City", "name": "Villanueva de la Cañada", "sameAs": "https://www.wikidata.org/wiki/Q973325" },
-    { "@type": "City", "name": "Madrid", "sameAs": "https://www.wikidata.org/wiki/Q2807" },
-    { "@type": "AdministrativeArea", "name": "Comunidad de Madrid", "sameAs": "https://www.wikidata.org/wiki/Q5756" }
-  ],
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
-  ],
-  "sameAs": ["https://whitemoon.es"],
-  "makesOffer": [
     {
-      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas integrales" },
-      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
-      "priceSpecification": { "@type": "UnitPriceSpecification", "priceCurrency": "EUR", "minPrice": "450", "unitText": "m²", "valueAddedTaxIncluded": false }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
     },
     {
-      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas de baño" },
-      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
-      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "3900", "valueAddedTaxIncluded": false }
-    },
-    {
-      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reformas de cocina" },
-      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
-      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "4900", "valueAddedTaxIncluded": false }
-    },
-    {
-      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electricidad: instalaciones, boletines y averías" },
-      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
-      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "45", "valueAddedTaxIncluded": false }
-    },
-    {
-      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fontanería: fugas, calentadores y sanitarios" },
-      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
-      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "60", "valueAddedTaxIncluded": false }
-    },
-    {
-      "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Urgencias eléctricas y de fontanería" },
-      "description": "Precio orientativo de partida, sin IVA. No es una tarifa cerrada: el importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.",
-      "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "EUR", "minPrice": "90", "valueAddedTaxIncluded": false }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
     }
-  ]
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Majadahonda"
+    },
+    {
+      "@type": "City",
+      "name": "Pozuelo de Alarcón"
+    },
+    {
+      "@type": "City",
+      "name": "Las Rozas de Madrid"
+    },
+    {
+      "@type": "City",
+      "name": "Boadilla del Monte"
+    },
+    {
+      "@type": "City",
+      "name": "Villaviciosa de Odón"
+    },
+    {
+      "@type": "City",
+      "name": "Madrid"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Reformas integrales"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Reformas de baño"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Reformas de cocina"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Electricidad"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fontanería"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Urgencias eléctricas y de fontanería"
+        }
+      }
+    ]
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -122,16 +227,54 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "¿El presupuesto de la reforma tiene algún coste?", "acceptedAnswer": { "@type": "Answer", "text": "No. La visita y el presupuesto por escrito son sin coste y sin compromiso. Valoramos la obra según superficie, calidades y estado de las instalaciones, y solo avanzamos si estás de acuerdo." } },
-    { "@type": "Question", "name": "¿Hacéis urgencias de electricidad y fontanería?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las averías eléctricas y las fugas de agua las atendemos como urgencia. Las reformas, en cambio, se presupuestan siempre con una visita previa." } },
-    { "@type": "Question", "name": "¿Tramitáis el boletín eléctrico?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Hacemos instalaciones eléctricas y tramitamos el boletín (certificado de instalación eléctrica) cuando la instalación lo requiere." } },
-    { "@type": "Question", "name": "¿Cuánto tarda una reforma de baño?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance: cambiar sanitarios no es lo mismo que rehacer alicatado, fontanería y electricidad. En el presupuesto te damos un plazo cerrado antes de empezar." } },
-    { "@type": "Question", "name": "¿Os encargáis también de los materiales?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Podemos llevar la reforma completa (albañilería, electricidad, fontanería y acabados) con los materiales incluidos, o trabajar solo la mano de obra si prefieres comprarlos tú." } },
-    { "@type": "Question", "name": "¿Los precios que aparecen en la web son cerrados?", "acceptedAnswer": { "@type": "Answer", "text": "No. Son precios orientativos, para que puedas hacerte una idea del orden de magnitud. El importe real depende de la superficie, las calidades y el estado de la instalación, y se cierra en el presupuesto por escrito después de la visita, que es sin compromiso." } },
-    { "@type": "Question", "name": "¿Cómo reservo la visita?", "acceptedAnswer": { "@type": "Answer", "text": "Habla con Dani, nuestro asistente. Eliges el servicio y la zona, escoges el día en el calendario y la franja horaria que te venga bien, y nos dejas tu nombre y tu teléfono. Te llamamos para confirmar la visita y darte el presupuesto." } },
-    { "@type": "Question", "name": "¿Qué horario tenéis para las visitas?", "acceptedAnswer": { "@type": "Answer", "text": "De lunes a viernes de 8:00 a 20:00 y los sábados de 9:00 a 14:00. Los domingos no hacemos visitas de presupuesto, aunque las urgencias de luz y agua se atienden llamando por teléfono." } },
-    { "@type": "Question", "name": "Tengo una urgencia ahora mismo, ¿también hay que pedir cita?", "acceptedAnswer": { "@type": "Answer", "text": "No. Si te has quedado sin luz o tienes una fuga, lo más rápido es llamar al 643 199 580: no pasa por el calendario de visitas y te confirmamos la hora de llegada al momento." } },
-    { "@type": "Question", "name": "¿En qué zonas trabajáis?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos en Majadahonda y Madrid Oeste (Pozuelo, Las Rozas, Boadilla, Villaviciosa de Odón…) y hacemos reformas en toda la Comunidad de Madrid." } }
+    {
+      "@type": "Question",
+      "name": "¿La visita y el presupuesto tienen algún coste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Pasamos a ver la vivienda o el local, medimos, revisamos el estado de las instalaciones y te damos el presupuesto por escrito, por partidas y con plazo. Solo avanzamos si te encaja."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hacéis también electricidad y fontanería sueltas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Además de reformas completas, hacemos cambio de cuadro, puntos de luz, boletín eléctrico, fugas, calentadores, grifería y sanitarios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si tengo una avería de luz o una fuga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las urgencias se atienden aparte de la obra. Llámanos al 643 199 580 y te confirmamos la hora de llegada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién lleva la obra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El mismo equipo lleva albañilería, electricidad y fontanería, con un único interlocutor para que los gremios no se pisen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Entregáis el boletín eléctrico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando la instalación lo requiere, sí: te lo entregamos junto con el repaso final del trabajo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo pido la visita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Habla con Dani, nuestro asistente del chat: eliges qué necesitas, tu zona, el día y la hora, dejas tu nombre y teléfono, y te llamamos para confirmar. También puedes llamarnos al 643 199 580 o escribir a comercial@whitemoon.es."
+      }
+    }
   ]
 }
 </script>
@@ -140,115 +283,146 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/" },
-    { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#servicios" },
-    { "@type": "ListItem", "position": 3, "name": "Precios", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#precios" },
-    { "@type": "ListItem", "position": 4, "name": "Zonas", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#zonas" },
-    { "@type": "ListItem", "position": 5, "name": "Contacto", "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#contacto" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#servicios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cómo trabajamos",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#proceso"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Contacto",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-REFORMAS-ELECTRICIDAD/#contacto"
+    }
   ]
 }
 </script>
 </head>
 <body>
-
-<!-- ===================== SPRITE SVG ===================== -->
+<!-- ===================== SPRITE DE ICONOS ===================== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <g id="ic-phone" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></g>
-    <g id="ic-pin" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></g>
-    <g id="ic-clock" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g>
-    <g id="ic-bolt" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></g>
-    <g id="ic-drop" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6.5 6.6 6.5 10.5a6.5 6.5 0 0 1-13 0C5.5 9.6 12 3 12 3z"/><path d="M9.2 14.5a2.8 2.8 0 0 0 2.8 2.8"/></g>
-    <g id="ic-bath" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M7 12V6.5A2.5 2.5 0 0 1 11.5 5"/><path d="M6.5 19 5 22M17.5 19 19 22"/></g>
-    <g id="ic-kitchen" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M7 6h.01M11 6h.01"/><path d="M8 13h8"/><path d="M8 17h5"/></g>
-    <g id="ic-shield" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></g>
-    <g id="ic-cert" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14-2 7 5-3 5 3-2-7"/><path d="m10 9 1.5 1.5L15 7"/></g>
-    <g id="ic-alert" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></g>
-    <g id="ic-home" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21v-7h6v7"/></g>
-    <g id="ic-check" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></g>
-    <g id="ic-arrow" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></g>
-    <g id="ic-star" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 6 20.4l1.4-6.8L2.3 9l6.9-.7z"/></g>
-    <g id="ic-menu" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></g>
-    <g id="ic-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></g>
-    <g id="ic-send" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></g>
-    <g id="ic-chat" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20l1.3-4A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"/></g>
-    <g id="ic-mail" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></g>
-    <g id="ic-globe" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></g>
-    <g id="ic-wa" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2s-.8.9-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5H7.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3 2 3.1 4.9 4.3c2.4 1 2.9.8 3.4.8.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2z"/></g>
-    <g id="ic-euro" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6.5A6 6 0 0 0 8 11a6 6 0 0 0 10 4.5M4 10h7M4 14h7"/></g>
-    <g id="ic-tools" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5.5a3.5 3.5 0 0 0 4.4 4.4L21 12l-9 9-3-3 9-9-2.1-2.1z"/><path d="m3 6 3-3 4 4-3 3z"/><path d="m7 10 4 4"/></g>
+    <g id="s" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></g>
   </defs>
+  <symbol id="ic-build" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="ic-cert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1 7.5 4.5-2.5 4.5 2.5-1-7.5"/></symbol>
+  <symbol id="ic-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="ic-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L3 20.5l1.6-5.6A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.8 9c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .6.5l.7 1.6c.1.3 0 .5-.1.7l-.4.5c-.1.2-.3.4-.1.7a6 6 0 0 0 2.7 2.3c.3.1.5 0 .7-.2l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4a1.8 1.8 0 0 1-1.3 1.7 3.7 3.7 0 0 1-2.7-.5 10 10 0 0 1-4.5-4.4 3.5 3.5 0 0 1-.6-2.1c0-.4.3-.7.6-.8z"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></symbol>
+  <symbol id="ic-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="ic-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></symbol>
+  <symbol id="ic-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v1"/><rect x="3" y="7" width="18" height="12.5" rx="2.5"/><circle cx="16.5" cy="13.2" r="1.3"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 2.5 17.4A2 2 0 0 0 4.2 20.4h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4.5M12 17h.01"/></symbol>
+  <symbol id="ic-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="ic-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.9 9 19.5 11l-5.6 2L12 18.5 10.1 13 4.5 11 10.1 9z"/><path d="M18.5 4v3M20 5.5h-3"/></symbol>
+  <symbol id="ic-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="ic-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="ic-kitchen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 10h16M8 6.5h.01M12 6.5h.01M8 14v3"/></symbol>
+  <symbol id="ic-bath" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 5.6a5.2 5.2 0 0 0-7.4 0L12 6.6l-1-1a5.2 5.2 0 1 0-7.4 7.4l1 1 7.4 7.4 7.4-7.4 1-1a5.2 5.2 0 0 0 0-7.4z"/></symbol>
+  <symbol id="ic-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="ic-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8.5V7a1.5 1.5 0 0 1 1.5-1.5H17V2.5h-2.5A4.5 4.5 0 0 0 10 7v1.5H7.5V12H10v9.5h4V12h2.6l.4-3.5z"/></symbol>
 </svg>
-
-<!-- ===================== FRANJA DE DEMO ===================== -->
-<p class="demo-strip">Demo · Reformas · WhiteMoon Agencia IA · <a href="https://whitemoon.es" target="_blank" rel="noopener">whitemoon.es</a></p>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20zM12 10v4M12 17h.01"/></symbol>
 
 <!-- ===================== NAV ===================== -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#inicio" class="brand" aria-label="WhiteMoon Reformas">
-      <img class="brand__logo" src="assets/logo-whitemoon-icono.jpg" alt="" width="96" height="90" aria-hidden="true">
-      <span class="brand__name">WhiteMoon</span>
-      <span class="brand__sub">Reformas</span>
+    <a href="./" class="brand">
+      <span class="brand__mark"><img src="assets/logo-whitemoon.webp" alt="" width="32" height="34" fetchpriority="high" decoding="async"></span>
+      <span class="brand__txt"><b>WhiteMoon</b><small>Reformas · Madrid</small></span>
     </a>
-    <nav class="nav-links" aria-label="Principal">
-      <a href="#inicio">Inicio</a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+      <a href="#top" class="active">Inicio</a>
+      <a href="#clinica">Sobre nosotros</a>
       <a href="#servicios">Servicios</a>
-      <a href="#precios">Precios</a>
-      <a href="#nosotros">Sobre nosotros</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#areas">Áreas</a>
+      <a href="#condiciones">Condiciones</a>
+      <a href="#faq">Preguntas</a>
     </nav>
     <div class="nav-cta">
-      <a href="#contacto" class="btn btn--sm">Contacto</a>
-      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-menu"/></svg></button>
+      <button class="btn btn--sm" data-watio type="button"><svg aria-hidden="true"><use href="#ic-calendar"/></svg>Pedir visita</button>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg aria-hidden="true"><use href="#ic-menu"/></svg></button>
     </div>
   </div>
 </header>
-
-<!-- Menú móvil -->
-<nav class="mobile-menu" id="mobileNav" aria-label="Menú móvil">
-  <a href="#inicio">Inicio</a>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#top">Inicio</a>
+  <a href="#clinica">Sobre nosotros</a>
   <a href="#servicios">Servicios</a>
-  <a href="#precios">Precios</a>
-  <a href="#nosotros">Sobre nosotros</a>
-  <a href="#zonas">Zonas</a>
+  <a href="#proceso">Cómo trabajamos</a>
+  <a href="#areas">Áreas</a>
+  <a href="#condiciones">Condiciones</a>
+  <a href="#faq">Preguntas</a>
   <a href="#contacto">Contacto</a>
-  <a href="#contacto" class="btn">Pedir presupuesto</a>
-</nav>
+  <button class="btn" data-watio type="button"><svg aria-hidden="true"><use href="#ic-calendar"/></svg>Pedir visita</button>
+</div>
 
 <main>
 
 <!-- ===================== HERO ===================== -->
-<section class="hero" id="inicio">
-  <div class="hero-bg">
-    <picture>
-      <source type="image/webp" srcset="assets/hero-reformas-480.webp 480w, assets/hero-reformas.webp 900w" sizes="100vw">
-      <img class="shot" src="assets/hero-reformas.jpg" srcset="assets/hero-reformas-480.jpg 480w, assets/hero-reformas.jpg 900w" sizes="100vw" alt="Electricista con casco instalando una caja de conexiones en la pared de una obra" width="900" height="600" fetchpriority="high" decoding="async">
-    </picture>
-    <div class="scrim" aria-hidden="true"></div>
-    <div class="dots" aria-hidden="true"></div>
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="wash"></div>
+    <img class="hero-video" src="assets/img/hero-bg.jpg" alt="" width="1600" height="900" decoding="async">
+    <div class="scrim"></div>
+    <div class="dots"></div>
+  </div>
+  <div class="hl" aria-hidden="true">
+    <div class="hl-arco hl-arco--a"></div><div class="hl-arco hl-arco--b"></div>
+    <div class="hl-suelo"></div>
+    <div class="hl-mini"></div>
+    <div class="hl-graf">
+      <div class="hl-bars"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hl-linea"><svg viewBox="0 0 200 46" preserveAspectRatio="none"><path pathLength="1" d="M2 40 L45 30 L90 34 L140 14 L196 6"/><circle cx="45" cy="30" r="3"/><circle cx="90" cy="34" r="3"/><circle cx="140" cy="14" r="3"/><circle cx="196" cy="6" r="3"/></svg></div>
+    </div>
+    <div class="hl-tel"><div class="hl-pant">
+      <div class="hl-m hl-m--u"><i></i><i></i></div>
+      <div class="hl-m"><i></i><i></i></div>
+      <div class="hl-m hl-m--t"><b></b></div>
+      <div class="hl-cita"><i></i></div>
+    </div></div>
+    <div class="hl-nota"></div>
   </div>
   <div class="wrap hero-content">
-    <span class="eyebrow">Majadahonda y Madrid Oeste · Presupuesto gratis</span>
-    <h1>
-      <span class="thin">Reformas y oficios de</span><br>
-      <span class="rotator"><span class="rotator__word"></span><span class="rotator__caret" aria-hidden="true"></span></span>
-    </h1>
-    <p class="hero-desc">
-      Reformas integrales, baños y cocinas, más electricidad y fontanería del día a día. Un solo equipo, presupuesto por escrito y urgencias de luz y agua cuando hace falta.
+    <h1>Reformas y oficios<span class="accent">sin sorpresas.</span></h1>
+    <p class="hero-rot">
+      <span>Especialistas en</span>
+      <span class="rot"><b id="rotWord">reformas integrales</b></span>
     </p>
-    <div class="hero-actions">
-      <a href="#contacto" class="btn"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg>Pedir presupuesto</a>
-      <a href="tel:+34643199580" class="btn btn--ghost"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>Llámanos</a>
+    <p class="hero-desc reveal">Reformas, baños y cocinas, más electricidad y fontanería, con <strong>un solo equipo</strong>. <strong>Visita y presupuesto por escrito sin compromiso</strong>, y urgencias de luz y agua aparte de la obra.</p>
+    <div class="hero-actions reveal">
+      <button class="btn" data-watio type="button"><svg aria-hidden="true"><use href="#ic-calendar"/></svg>Pedir visita</button>
+      <a class="btn btn--ghost" href="#servicios"><svg aria-hidden="true"><use href="#ic-build"/></svg>Ver servicios</a>
     </div>
-    <ul class="hero-meta">
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Visita sin coste</li>
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-cert"/></svg>Boletín eléctrico</li>
-      <li class="is-urg"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg>Urgencias de luz y agua</li>
-    </ul>
-    <p class="hero-contact">
-      <a href="tel:+34643199580"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
-      <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Majadahonda · Madrid Oeste</span>
+    <p class="hero-contact reveal">
+      <a href="tel:+34643199580"><svg aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
+      <a href="https://wa.me/34643199580" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp</a>
+      <a href="mailto:comercial@whitemoon.es"><svg aria-hidden="true"><use href="#ic-mail"/></svg>comercial@whitemoon.es</a>
     </p>
   </div>
 </section>
@@ -257,399 +431,380 @@
 <div class="trust">
   <div class="wrap">
     <div class="trust-grid">
-      <div class="trust-i"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span><div><b>Presupuesto por escrito</b><span>Sabes qué cuesta antes de empezar</span></div></div>
-      <div class="trust-i"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tools"/></svg></span><div><b>Todos los oficios</b><span>Obra, electricidad y fontanería</span></div></div>
-      <div class="trust-i is-urg"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span><div><b>Urgencias de luz y agua</b><span>Averías y fugas atendidas aparte</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span><div><b>Visita sin coste</b><span>Medimos y presupuestamos</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><div><b>Presupuesto por escrito</b><span>Por partidas y con plazo</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-build"/></svg></span><div><b>Todos los oficios</b><span>Obra, luz y agua</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-alert"/></svg></span><div><b>Urgencias aparte</b><span>Averías y fugas</span></div></div>
     </div>
   </div>
 </div>
 
-<!-- ===================== MARQUEE ===================== -->
 <div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-home"/></svg>Reformas integrales</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-bath"/></svg>Reformas de baño</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-kitchen"/></svg>Reformas de cocina</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-bolt"/></svg>Electricidad</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-drop"/></svg>Fontanería</span>
-    <span class="marquee-item is-urg"><svg viewBox="0 0 24 24"><use href="#ic-alert"/></svg>Urgencias</span>
-    <!-- duplicado para bucle continuo -->
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-home"/></svg>Reformas integrales</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-bath"/></svg>Reformas de baño</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-kitchen"/></svg>Reformas de cocina</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-bolt"/></svg>Electricidad</span>
-    <span class="marquee-item"><svg viewBox="0 0 24 24"><use href="#ic-drop"/></svg>Fontanería</span>
-    <span class="marquee-item is-urg"><svg viewBox="0 0 24 24"><use href="#ic-alert"/></svg>Urgencias</span>
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item"><b>Visita</b> y medición sin coste<span class="dot"></span></span>
+    <span class="marquee-item"><b>Presupuesto</b> por escrito y por partidas<span class="dot"></span></span>
+    <span class="marquee-item"><b>Un solo</b> equipo e interlocutor<span class="dot"></span></span>
+    <span class="marquee-item"><b>Instalaciones</b> en regla<span class="dot"></span></span>
+    <span class="marquee-item"><b>Plazos</b> planificados sin días muertos<span class="dot"></span></span>
+    <span class="marquee-item"><b>Entrega</b> y repaso contigo<span class="dot"></span></span>
   </div>
 </div>
 
-<!-- ===================== 01 · SOBRE NOSOTROS ===================== -->
-<section class="sec" id="nosotros">
-  <span class="bignum bignum--l" aria-hidden="true" data-n="01"></span>
+
+
+<!-- ===================== LA CLÍNICA ===================== -->
+<section class="sec" id="clinica">
+  <span class="bignum" aria-hidden="true" data-n="01" style="left:-1.5vw;top:26px"></span>
   <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Sobre nosotros</span>
+      <h2>Reformas y oficios sin<br>subcontratar el problema</h2>
+    </div>
     <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>WhiteMoon Reformas es una <strong>empresa de reformas, electricidad y fontanería en Majadahonda y Madrid Oeste</strong>: albañilería, instalaciones y acabados con el mismo equipo.</p>
+        <p>Cada trabajo empieza igual: <strong>primero se mira, después se presupuesta y solo entonces se toca la pared</strong>. Te damos el presupuesto por partidas y con plazo.</p>
+        <p>La visita la pides por el chat, a cualquier hora, y te llamamos para confirmarla. Y si prefieres pensarlo, <strong>sin compromiso ni prisa</strong>.</p>
+      </div>
       <div class="about-media reveal">
         <div class="framed">
           <picture>
-            <source type="image/webp" srcset="assets/nosotros-obra-480.webp 480w, assets/nosotros-obra.webp 720w" sizes="(max-width:900px) calc(100vw - 44px), 590px">
-            <img src="assets/nosotros-obra.jpg" srcset="assets/nosotros-obra-480.jpg 480w, assets/nosotros-obra.jpg 720w" sizes="(max-width:900px) calc(100vw - 44px), 590px" alt="Dos operarios cortando molduras de madera con una ingletadora durante una reforma" loading="lazy" decoding="async" width="720" height="900">
+            <source type="image/webp" sizes="(max-width:900px) calc(100vw - 36px), 560px" srcset="assets/img/obra-480.webp 480w, assets/img/obra.webp 900w">
+            <img src="assets/img/obra-480.jpg" srcset="assets/img/obra-480.jpg 480w, assets/img/obra.jpg 900w" sizes="(max-width:900px) calc(100vw - 36px), 560px" alt="Carpintero cortando un tablero con una ingletadora en una vivienda en obra, foto de archivo" width="900" height="640" loading="lazy" decoding="async">
           </picture>
+          <div class="hl-sc" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b><em></em></div>
         </div>
+        <div class="hs-fo hs-fo--a hs-p hs-p--g" aria-hidden="true" data-l="Visita"><div class="hs-pul"><svg width="260" height="70" viewBox="0 0 260 70" preserveAspectRatio="none"><path fill="none" stroke="none" pathLength="1" d="M0 40 H70 L82 40 L92 10 L106 62 L118 28 L128 40 H260"/></svg></div></div>
+        <div class="hs-fo hs-fo--b hs-p d2" aria-hidden="true" data-l="Presupuesto"><div class="hl-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
         <div class="about-badge">
-          <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tools"/></svg></span>
-          <div><b>Equipo propio</b><span>Majadahonda y Madrid Oeste</span></div>
+          <span class="ic"><svg aria-hidden="true"><use href="#ic-shield"/></svg></span>
+          <div><b>Presupuesto por escrito</b><span>Sin compromiso</span></div>
         </div>
-      </div>
-      <div class="about-copy reveal">
-        <div class="sec-head">
-          <span class="eyebrow">Sobre nosotros</span>
-          <h2>Reformas y oficios sin subcontratar el problema</h2>
-          <p>En WhiteMoon llevamos la obra y las instalaciones con el mismo equipo: albañilería, electricidad y fontanería. Un único interlocutor, un presupuesto que se entiende y un plazo que se cumple.</p>
-        </div>
-        <ul class="check-list">
-          <li class="check-row"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-cert"/></svg></span><div><b>Instalaciones en regla</b><span>Electricidad conforme a normativa y boletín cuando la instalación lo requiere.</span></div></li>
-          <li class="check-row"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg></span><div><b>Presupuesto cerrado</b><span>Partidas detalladas por escrito. Lo que no esté hablado, no se cobra.</span></div></li>
-          <li class="check-row"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg></span><div><b>Atención directa</b><span>Hablas con quien hace el trabajo y respondemos rápido.</span></div></li>
-        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 02 · SERVICIOS (parrilla de tarjetas) ===================== -->
-<section class="sec sec--alt" id="servicios">
-  <span class="bignum bignum--r" aria-hidden="true" data-n="02"></span>
+<!-- ===================== SERVICIOS ===================== -->
+<section class="sec sec--bone" id="servicios">
+  <span class="bignum" aria-hidden="true" data-n="02" style="right:-1.5vw;top:20px"></span>
   <div class="wrap">
+    <div class="hs" aria-hidden="true"><div class="hs-arco hs-arco--a"></div><div class="hs-arco hs-arco--b"></div><div class="hs-suelo"></div><div class="hs-p d2" style="left:0;top:40px;width:215px;height:172px;--r:-3deg;transform:rotate(-3deg)" data-l="Obras"><div class="hs-rows"><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div></div></div><div class="hs-tel" style="right:14px;top:0"><div class="hs-pant"><div class="hl-m hl-m--u"><i></i><i></i></div><div class="hl-m"><i></i><i></i></div><div class="hl-m hl-m--t"><b></b></div><div class="hl-cita"><i></i></div></div></div></div>
     <div class="sec-head reveal">
-      <span class="eyebrow alt">Servicios</span>
-      <h2>La obra y las instalaciones, resueltas por un solo equipo</h2>
-      <p>Desde una reforma integral hasta cambiar un calentador o localizar una fuga. Lo mismo si es una casa entera que si es una avería de esta tarde.</p>
+      <span class="eyebrow green">Servicios</span>
+      <h2>Obra, luz y agua,<br>un solo equipo</h2>
+      <p>Cuéntale a Dani qué necesitas y pide tu visita. <strong>No mostramos precios en la web</strong>: los das tras la visita, por escrito.</p>
     </div>
-    <div class="card-grid">
-      <article class="wmp-card reveal">
-        <div class="wmp-ph"><picture><source type="image/webp" srcset="assets/svc-reformas-integrales-480.webp 480w, assets/svc-reformas-integrales.webp 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px"><img src="assets/svc-reformas-integrales.jpg" srcset="assets/svc-reformas-integrales-480.jpg 480w, assets/svc-reformas-integrales.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px" alt="Vivienda en obra con tabiques abiertos y un operario trabajando sobre un andamio" width="800" height="450" loading="lazy" decoding="async"></picture><span class="wmp-tipo"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg>01</span></div>
-        <div class="wmp-body"><h3 class="wmp-title">Reformas integrales</h3><p class="wmp-desc">Viviendas y locales de principio a fin: distribución, albañilería, instalaciones y acabados.</p><div class="wmp-foot"><div class="wmp-price">desde <b>450 €/m²</b><small>orientativo</small></div><button type="button" class="wmp-cta" data-bot data-servicio="Reforma integral">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div></div>
+    <div class="svc-grid">
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-reformas-integrales-400.webp 400w, assets/img/svc-reformas-integrales.webp 720w">
+            <img src="assets/img/svc-reformas-integrales-400.jpg" srcset="assets/img/svc-reformas-integrales-400.jpg 400w, assets/img/svc-reformas-integrales.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Vivienda en reforma con paredes de ladrillo y andamio, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-build"/></svg>Reformas integrales</span>
+        </div>
+        <div class="svc-body">
+          <h3>Reformas integrales</h3>
+          <p>Viviendas y locales de principio a fin: distribución, albañilería, instalaciones y acabados.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Visita sin coste<small>y presupuesto por escrito</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Reforma integral">Pedir visita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
       </article>
-      <article class="wmp-card reveal">
-        <div class="wmp-ph"><picture><source type="image/webp" srcset="assets/svc-bano-480.webp 480w, assets/svc-bano.webp 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px"><img src="assets/svc-bano.jpg" srcset="assets/svc-bano-480.jpg 480w, assets/svc-bano.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px" alt="Baño reformado con ducha de obra, mampara de cristal y mueble con doble lavabo" width="800" height="450" loading="lazy" decoding="async"></picture><span class="wmp-tipo"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bath"/></svg>02</span></div>
-        <div class="wmp-body"><h3 class="wmp-title">Reformas de baño</h3><p class="wmp-desc">Cambio de bañera por plato de ducha, alicatado, sanitarios y fontanería nueva.</p><div class="wmp-foot"><div class="wmp-price">desde <b>3.900 €</b><small>orientativo</small></div><button type="button" class="wmp-cta" data-bot data-servicio="Reforma de baño">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div></div>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-bano-400.webp 400w, assets/img/svc-bano.webp 720w">
+            <img src="assets/img/svc-bano-400.jpg" srcset="assets/img/svc-bano-400.jpg 400w, assets/img/svc-bano.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Baño moderno con ducha de cristal y encimera clara, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-bath"/></svg>Reformas de baño</span>
+        </div>
+        <div class="svc-body">
+          <h3>Reformas de baño</h3>
+          <p>Cambio de bañera por plato de ducha, alicatado, sanitarios y fontanería nueva.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Presupuesto por partidas<small>tras la visita</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Reforma de baño">Pedir visita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
       </article>
-      <article class="wmp-card reveal">
-        <div class="wmp-ph"><picture><source type="image/webp" srcset="assets/svc-cocina-480.webp 480w, assets/svc-cocina.webp 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px"><img src="assets/svc-cocina.jpg" srcset="assets/svc-cocina-480.jpg 480w, assets/svc-cocina.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px" alt="Cocina reformada con muebles blancos, isla y electrodomésticos de acero inoxidable" width="800" height="450" loading="lazy" decoding="async"></picture><span class="wmp-tipo"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-kitchen"/></svg>03</span></div>
-        <div class="wmp-body"><h3 class="wmp-title">Reformas de cocina</h3><p class="wmp-desc">Muebles, encimera, campana y toda la instalación de agua y electricidad al día.</p><div class="wmp-foot"><div class="wmp-price">desde <b>4.900 €</b><small>orientativo</small></div><button type="button" class="wmp-cta" data-bot data-servicio="Reforma de cocina">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div></div>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-cocina-400.webp 400w, assets/img/svc-cocina.webp 720w">
+            <img src="assets/img/svc-cocina-400.jpg" srcset="assets/img/svc-cocina-400.jpg 400w, assets/img/svc-cocina.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Cocina moderna blanca con isla y taburetes, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-kitchen"/></svg>Reformas de cocina</span>
+        </div>
+        <div class="svc-body">
+          <h3>Reformas de cocina</h3>
+          <p>Muebles, encimera, campana y toda la instalación de agua y electricidad al día.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Con instalaciones al día<small>agua y electricidad</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Reforma de cocina">Pedir visita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
       </article>
-      <article class="wmp-card reveal">
-        <div class="wmp-ph"><picture><source type="image/webp" srcset="assets/svc-electricidad-480.webp 480w, assets/svc-electricidad.webp 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px"><img src="assets/svc-electricidad.jpg" srcset="assets/svc-electricidad-480.jpg 480w, assets/svc-electricidad.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px" alt="Electricista comprobando con un multímetro los automáticos de un cuadro eléctrico" width="800" height="450" loading="lazy" decoding="async"></picture><span class="wmp-tipo"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg>04</span></div>
-        <div class="wmp-body"><h3 class="wmp-title">Electricidad</h3><p class="wmp-desc">Instalaciones nuevas, cambio de cuadro, boletín eléctrico y reparación de averías.</p><div class="wmp-foot"><div class="wmp-price">desde <b>45 €</b><small>orientativo</small></div><button type="button" class="wmp-cta" data-bot data-servicio="Electricidad">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div></div>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-electricidad-400.webp 400w, assets/img/svc-electricidad.webp 720w">
+            <img src="assets/img/svc-electricidad-400.jpg" srcset="assets/img/svc-electricidad-400.jpg 400w, assets/img/svc-electricidad.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Electricista revisando un cuadro eléctrico con un destornillador, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-bolt"/></svg>Electricidad</span>
+        </div>
+        <div class="svc-body">
+          <h3>Electricidad</h3>
+          <p>Instalaciones nuevas, cambio de cuadro, boletín eléctrico y reparación de averías.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Boletín si se requiere<small>instalaciones en regla</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Electricidad">Pedir visita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
       </article>
-      <article class="wmp-card reveal">
-        <div class="wmp-ph"><picture><source type="image/webp" srcset="assets/svc-fontaneria-480.webp 480w, assets/svc-fontaneria.webp 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px"><img src="assets/svc-fontaneria.jpg" srcset="assets/svc-fontaneria-480.jpg 480w, assets/svc-fontaneria.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px" alt="Fontanero reparando el sifón y las llaves de paso bajo el mueble de un lavabo" width="800" height="450" loading="lazy" decoding="async"></picture><span class="wmp-tipo"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg>05</span></div>
-        <div class="wmp-body"><h3 class="wmp-title">Fontanería</h3><p class="wmp-desc">Fugas y humedades, calentadores y termos, grifería, sanitarios y cambio de tuberías.</p><div class="wmp-foot"><div class="wmp-price">desde <b>60 €</b><small>orientativo</small></div><button type="button" class="wmp-cta" data-bot data-servicio="Fontanería">Reservar visita<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></button></div></div>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-fontaneria-400.webp 400w, assets/img/svc-fontaneria.webp 720w">
+            <img src="assets/img/svc-fontaneria-400.jpg" srcset="assets/img/svc-fontaneria-400.jpg 400w, assets/img/svc-fontaneria.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Fontanero trabajando en una tubería de desagüe, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-drop"/></svg>Fontanería</span>
+        </div>
+        <div class="svc-body">
+          <h3>Fontanería</h3>
+          <p>Fugas y humedades, calentadores y termos, grifería, sanitarios y cambio de tuberías.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Fugas y humedades<small>calentadores y grifería</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Fontanería">Pedir visita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
       </article>
-      <article class="wmp-card is-urg reveal">
-        <div class="wmp-ph"><picture><source type="image/webp" srcset="assets/svc-urgencias-480.webp 480w, assets/svc-urgencias.webp 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px"><img src="assets/svc-urgencias.jpg" srcset="assets/svc-urgencias-480.jpg 480w, assets/svc-urgencias.jpg 800w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 380px" alt="Operario sujetando un cable eléctrico pelado con guantes de protección" width="800" height="450" loading="lazy" decoding="async"></picture><span class="wmp-tipo"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg>06</span></div>
-        <div class="wmp-body"><h3 class="wmp-title">Urgencias eléctricas y de fontanería</h3><p class="wmp-desc">Te has quedado sin luz o tienes una fuga: lo atendemos como urgencia, no como obra.</p><div class="wmp-foot"><div class="wmp-price">desde <b>90 €</b><small>salida orientativa</small></div><a class="wmp-cta" href="tel:+34643199580">Llamar ahora<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-arrow"/></svg></a></div></div>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-urgencias-400.webp 400w, assets/img/svc-urgencias.webp 720w">
+            <img src="assets/img/svc-urgencias-400.jpg" srcset="assets/img/svc-urgencias-400.jpg 400w, assets/img/svc-urgencias.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Mano con guante sujetando un cable eléctrico, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-alert"/></svg>Urgencias</span>
+        </div>
+        <div class="svc-body">
+          <h3>Urgencias eléctricas y de fontanería</h3>
+          <p>Te has quedado sin luz o tienes una fuga: lo atendemos como urgencia, no como obra.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Aparte de la obra<small>llámanos y confirmamos hora</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Es una urgencia">Pedir visita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
       </article>
+
     </div>
   </div>
 </section>
 
-<!-- ===================== STATS (honestos) ===================== -->
-<div class="sec--alt stats-band">
-  <div class="wrap">
-    <div class="why-grid why-grid--3">
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tools"/></svg></span><b>Equipo propio</b><span>Obra, electricidad y fontanería en la misma mano.</span></div>
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg></span><b>Presupuesto sin compromiso</b><span>Visita, medición y precio por escrito sin coste.</span></div>
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-cert"/></svg></span><b>Instalaciones en regla</b><span>Boletín eléctrico cuando la instalación lo requiere.</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- ===================== 03 · CÓMO TRABAJAMOS ===================== -->
+<!-- ===================== PROCESO ===================== -->
 <section class="sec" id="proceso">
-  <span class="bignum bignum--l" aria-hidden="true" data-n="03"></span>
+  <span class="bignum" aria-hidden="true" data-n="03" style="left:-1.5vw;top:26px"></span>
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Cómo trabajamos</span>
-      <h2>De la visita a la entrega, sin sorpresas</h2>
-      <p>El orden es el mismo en una reforma integral que en un cambio de cuadro: primero se mira, después se presupuesta y solo entonces se toca la pared.</p>
+      <h2>De la visita a la entrega,<br>sin sorpresas</h2>
+      <p>Cuatro pasos, en este orden: primero se mira, después se presupuesta y solo entonces se toca la pared.</p>
     </div>
-    <ol class="proc-grid">
-      <li class="proc-c reveal">
-        <span class="n" aria-hidden="true">01</span>
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg></span>
+    <div class="proc-grid">
+      <div class="proc-c reveal"><span class="hc hc-cal" aria-hidden="true"><i></i></span>
+        <span class="n">01</span><span class="ic"><svg aria-hidden="true"><use href="#ic-calendar"/></svg></span>
+        <h3>Pides tu visita</h3>
+        <p>Con Dani en el chat: qué necesitas, tu zona, día y hora, y tus datos. Sin formularios largos.</p>
+      </div>
+      <div class="proc-c reveal"><span class="hc hc-scan" aria-hidden="true"><span class="hc-bars"><i></i><i></i><i></i><i></i><i></i></span></span>
+        <span class="n">02</span><span class="ic"><svg aria-hidden="true"><use href="#ic-search"/></svg></span>
         <h3>Visita y medición</h3>
-        <p>Pasamos a ver la vivienda o el local sin coste. Medimos, revisamos el estado de la instalación eléctrica y de fontanería y escuchamos qué tienes en la cabeza.</p>
-      </li>
-      <li class="proc-c reveal">
-        <span class="n" aria-hidden="true">02</span>
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg></span>
+        <p>Pasamos a ver la vivienda o el local sin coste, medimos y revisamos el estado de las instalaciones.</p>
+      </div>
+      <div class="proc-c reveal"><span class="hc hc-doc" aria-hidden="true"><i></i><i></i><i></i><u></u><b></b></span>
+        <span class="n">03</span><span class="ic"><svg aria-hidden="true"><use href="#ic-file"/></svg></span>
         <h3>Presupuesto por escrito</h3>
-        <p>Te lo damos por partidas y con plazo, para que sepas qué entra y qué no. Sin compromiso: solo avanzamos si te encaja.</p>
-      </li>
-      <li class="proc-c reveal">
-        <span class="n" aria-hidden="true">03</span>
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-tools"/></svg></span>
-        <h3>Ejecución con un interlocutor</h3>
-        <p>Albañilería, electricidad y fontanería las lleva el mismo equipo. Hablas siempre con la misma persona y los gremios no se pisan entre sí.</p>
-      </li>
-      <li class="proc-c reveal">
-        <span class="n" aria-hidden="true">04</span>
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg></span>
-        <h3>Entrega y repaso</h3>
-        <p>Retiramos escombros, limpiamos y repasamos contigo el trabajo. Si la instalación lo requiere, te entregamos el boletín eléctrico.</p>
-      </li>
-    </ol>
+        <p>Por partidas y con plazo, para que sepas qué entra y qué no. Solo avanzamos si te encaja.</p>
+      </div>
+      <div class="proc-c reveal"><span class="hc hc-ring" aria-hidden="true"><i></i><b></b></span>
+        <span class="n">04</span><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span>
+        <h3>Ejecución y entrega</h3>
+        <p>El mismo equipo lleva albañilería, electricidad y fontanería. Al final repasamos contigo el trabajo.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ===================== 04 · ÁREAS DE TRABAJO ===================== -->
-<section class="sec sec--alt" id="areas">
-  <span class="bignum bignum--r" aria-hidden="true" data-n="04"></span>
+<!-- ===================== POR QUÉ NOSOTROS ===================== -->
+<section class="sec sec--bone" id="nosotros">
+  <span class="bignum" aria-hidden="true" data-n="04" style="right:-1.5vw;top:20px"></span>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow alt">Áreas de trabajo</span>
-      <h2>Tres oficios, un solo equipo</h2>
-      <p>Cada área tiene su especialista, pero el presupuesto, el plazo y el interlocutor son los mismos.</p>
+      <span class="eyebrow green">Por qué nosotros</span>
+      <h2>Una obra con la que<br>se convive bien</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-c reveal"><span class="hc hc-doc" aria-hidden="true"><i></i><i></i><i></i><u></u><b></b></span><span class="ic"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><h3>Precio claro</h3><p>Presupuesto por partidas y por escrito. Sin cargos que no hayamos hablado antes.</p></div>
+      <div class="why-c reveal"><span class="hc hc-seal" aria-hidden="true"><i></i><b></b><u></u></span><span class="ic"><svg aria-hidden="true"><use href="#ic-cert"/></svg></span><h3>Instalaciones en regla</h3><p>Electricidad conforme a normativa y boletín cuando la instalación lo requiere.</p></div>
+      <div class="why-c reveal"><span class="hc hc-shield" aria-hidden="true"><i></i></span><span class="ic"><svg aria-hidden="true"><use href="#ic-shield"/></svg></span><h3>Casa protegida</h3><p>Cubrimos suelos y accesos, y dejamos la obra recogida cada día.</p></div>
+      <div class="why-c reveal"><span class="hc hc-ecg" aria-hidden="true"><svg width="104" height="64" viewBox="0 0 104 64" preserveAspectRatio="none"><path fill="none" stroke="none" pathLength="1" d="M0 36 H30 L38 36 L44 14 L52 54 L60 26 L66 36 H104"/></svg></span><span class="ic"><svg aria-hidden="true"><use href="#ic-heart"/></svg></span><h3>Urgencias aparte</h3><p>Una avería de luz o una fuga no entra en la cola de la obra: se atiende ya.</p></div>
+    </div>
+    <div class="nos-grid">
+      <div class="nos-copy reveal">
+        <span class="eyebrow">Nuestro compromiso</span>
+        <p style="margin-top:16px">No vendemos obra, resolvemos tu problema. Por eso <strong>solo proponemos lo que encaja contigo</strong>: si una solución más sencilla te sirve, te lo decimos.</p>
+        <p>Y si algo no lo hacemos nosotros, te lo decimos en vez de improvisar.</p>
+      </div>
+      <div class="check-list reveal">
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span><div><b>Información explicada</b><span>Entiendes qué se hará y por qué.</span></div></div>
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><div><b>Presupuesto por escrito</b><span>Por partidas y con plazo.</span></div></div>
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-calendar"/></svg></span><div><b>Visita sin llamadas</b><span>La pides por el chat a cualquier hora.</span></div></div>
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-clock"/></svg></span><div><b>Entrega y repaso</b><span>Repasamos el trabajo contigo al terminar.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ÁREAS ===================== -->
+<section class="sec" id="areas">
+  <span class="bignum" aria-hidden="true" data-n="05" style="left:-1.5vw;top:20px"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Áreas</span>
+      <h2>Tres oficios,<br>un solo equipo</h2>
+      <p>Cada área tiene su especialista, pero la visita, el presupuesto y el interlocutor son los mismos.</p>
     </div>
     <div class="areas-grid">
-      <article class="area-c reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span>
+      <div class="area-c reveal"><span class="hc hc-orb" aria-hidden="true"><i></i><b></b><u></u></span>
+        <span class="ic"><svg aria-hidden="true"><use href="#ic-build"/></svg></span>
         <h3>Reformas</h3>
         <p>Viviendas y locales de principio a fin, o solo la pieza que te falta: el baño, la cocina o esa pared que sobra.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Distribución, tabiquería y albañilería</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Baños y cocinas completos</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Alicatado, solado, pintura y acabados</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Distribución, tabiquería y albañilería</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Baños y cocinas completos</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Alicatado, solado, pintura y acabados</li>
         </ul>
-      </article>
-      <article class="area-c reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span>
+      </div>
+      <div class="area-c reveal"><span class="hc hc-arco" aria-hidden="true"><i></i><b></b></span>
+        <span class="ic"><svg aria-hidden="true"><use href="#ic-bolt"/></svg></span>
         <h3>Electricidad</h3>
         <p>Instalaciones nuevas y reparaciones, con la documentación en regla cuando la instalación lo exige.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Cuadros, automáticos y diferenciales</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Puntos de luz, enchufes y circuitos nuevos</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Boletín eléctrico y localización de averías</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Cuadros, automáticos y diferenciales</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Puntos de luz, enchufes y circuitos</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Boletín y localización de averías</li>
         </ul>
-      </article>
-      <article class="area-c reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span>
+      </div>
+      <div class="area-c reveal"><span class="hc hc-fam" aria-hidden="true"><i></i><b></b><u></u></span>
+        <span class="ic"><svg aria-hidden="true"><use href="#ic-drop"/></svg></span>
         <h3>Fontanería</h3>
         <p>Del goteo que mancha el techo del vecino al cambio completo de tuberías de una vivienda.</p>
         <ul>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Localización de fugas y humedades</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Calentadores, termos y grifería</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-check"/></svg>Sanitarios y cambio de tuberías</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Localización de fugas y humedades</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Calentadores, termos y grifería</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Sanitarios y cambio de tuberías</li>
         </ul>
-      </article>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 05 · POR QUÉ ELEGIRNOS ===================== -->
-<section class="sec">
-  <span class="bignum bignum--l" aria-hidden="true" data-n="05"></span>
+<!-- ===================== CONDICIONES ===================== -->
+<section class="sec sec--bone" id="condiciones">
+  <span class="bignum" aria-hidden="true" data-n="06" style="right:-1.5vw;top:20px"></span>
   <div class="wrap">
+    <div class="hs hs--c" aria-hidden="true"><div class="hs-arco hs-arco--a"></div><div class="hs-arco hs-arco--b"></div><div class="hs-suelo"></div><div class="hs-p hs-doc" style="left:46px;top:0;width:206px;height:210px;--r:-3deg;transform:rotate(-3deg)" data-l="Presupuesto"><i></i><i></i><i></i><i></i><u></u><b></b></div><div class="hs-p hs-p--g d2" style="right:0;top:76px;width:172px;height:128px;--r:3deg;transform:rotate(3deg)" data-l="Plazos"><div class="hs-rows"><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div></div></div></div>
     <div class="sec-head reveal">
-      <span class="eyebrow">Por qué elegirnos</span>
-      <h2>Una obra con la que se convive bien</h2>
+      <span class="eyebrow green">Condiciones</span>
+      <h2>Condiciones claras,<br>sin letra pequeña</h2>
+      <p>En esta demo <strong>no hay precios ni cifras</strong>. En una empresa real, cada trabajo se presupuestaría por escrito tras la visita.</p>
     </div>
-    <div class="why-grid">
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg></span><h3>Precio claro</h3><p>Presupuesto por partidas y por escrito. Sin cargos que no hayamos hablado antes.</p></div>
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-clock"/></svg></span><h3>Plazos que se cumplen</h3><p>Planificamos los gremios para que la obra avance sin días muertos.</p></div>
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-shield"/></svg></span><h3>Casa protegida</h3><p>Cubrimos suelos y accesos, y dejamos la obra recogida cada día.</p></div>
-      <div class="why-c is-urg reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span><h3>Urgencias aparte</h3><p>Si es una avería de luz o una fuga, no entra en la cola de la obra: se atiende ya.</p></div>
+    <div class="precios-grid">
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-search"/></svg></span><h3>Visita</h3></div>
+        <div class="precio-row"><span class="k">Visita y medición</span><span class="v">Sin coste</span></div>
+        <div class="precio-row"><span class="k">Revisión de instalaciones</span><span class="v">Incluida</span></div>
+        <div class="precio-row"><span class="k">Compromiso</span><span class="v">Ninguno</span></div>
+      </div>
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><h3>Presupuesto</h3></div>
+        <div class="precio-row"><span class="k">Formato</span><span class="v">Por escrito</span></div>
+        <div class="precio-row"><span class="k">Desglose</span><span class="v">Por partidas</span></div>
+        <div class="precio-row"><span class="k">Plazo</span><span class="v">Incluido</span></div>
+      </div>
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-build"/></svg></span><h3>Obra</h3></div>
+        <div class="precio-row"><span class="k">Equipo</span><span class="v">Uno solo</span></div>
+        <div class="precio-row"><span class="k">Interlocutor</span><span class="v">El mismo</span></div>
+        <div class="precio-row"><span class="k">Entrega</span><span class="v">Con repaso</span></div>
+      </div>
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-alert"/></svg></span><h3>Urgencias</h3></div>
+        <div class="precio-row"><span class="k">Luz y agua</span><span class="v">Aparte de la obra</span></div>
+        <div class="precio-row"><span class="k">Cómo</span><span class="v">Llamando</span></div>
+        <div class="precio-row"><span class="k">Llegada</span><span class="v">Te la confirmamos</span></div>
+      </div>
+
     </div>
+    <p class="precios-note reveal"><svg aria-hidden="true"><use href="#ic-info"/></svg><span>Demo con empresa ficticia: no se muestran precios, ofertas ni cifras de ningún tipo. Las fotos son imágenes de archivo. El importe real de una obra se fija en el presupuesto por escrito tras la visita.</span></p>
   </div>
 </section>
 
-<!-- ===================== 06 · DANI (agente IA) =====================
-     Solo textos que ya existían en la web (la tarjeta "Presupuesto en
-     1 minuto" del hero anterior). No describe funciones que dani.js no tenga. -->
-<section class="sec sec--alt" id="agente-ia">
-  <span class="bignum bignum--r" aria-hidden="true" data-n="06"></span>
-  <div class="wrap">
-    <div class="nos-grid">
-      <div class="nos-copy reveal">
-        <div class="sec-head">
-          <span class="eyebrow alt">Dani, asistente de reformas</span>
-          <h2>Presupuesto en 1 minuto</h2>
-          <p>Cuéntale a Dani qué necesitas y te llamamos.</p>
-        </div>
-        <button type="button" class="btn" data-bot><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>Hablar con Dani</button>
-      </div>
-      <ul class="check-list reveal">
-        <li class="check-row check-row--line"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span><span>Reformas integrales, baños y cocinas</span></li>
-        <li class="check-row check-row--line"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span><span>Electricidad, boletines y averías</span></li>
-        <li class="check-row check-row--line"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span><span>Fontanería, fugas y calentadores</span></li>
-        <li class="check-row check-row--line is-urg"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span><span>Urgencias eléctricas y de agua</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 07 · PRECIOS ORIENTATIVOS ===================== -->
-<section class="sec" id="precios">
-  <span class="bignum bignum--l" aria-hidden="true" data-n="07"></span>
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Precios</span>
-      <h2>Una referencia para hacerte una idea</h2>
-      <p>Estas cifras sirven para situarte, no para cerrar una obra. El precio real depende de la superficie, las calidades y el estado de la instalación, y se fija en el presupuesto tras la visita.</p>
-      <p class="precios__flag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg>Orientativo · presupuesto sin compromiso</p>
-    </div>
-    <div class="precios__grid">
-      <article class="precio reveal">
-        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg></span><h3>Reformas</h3></div>
-        <dl class="precio__list">
-          <div><dt>Reforma integral de vivienda</dt><dd>desde 450 €/m²</dd></div>
-          <div><dt>Reforma de baño completa</dt><dd>desde 3.900 €</dd></div>
-          <div><dt>Reforma de cocina completa</dt><dd>desde 4.900 €</dd></div>
-          <div><dt>Cambio de bañera por plato de ducha</dt><dd>desde 1.450 €</dd></div>
-          <div><dt>Pintura de vivienda</dt><dd>desde 9 €/m²</dd></div>
-        </dl>
-      </article>
-      <article class="precio reveal">
-        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-bolt"/></svg></span><h3>Electricidad</h3></div>
-        <dl class="precio__list">
-          <div><dt>Punto de luz o enchufe nuevo</dt><dd>desde 45 €</dd></div>
-          <div><dt>Cambio de cuadro eléctrico</dt><dd>desde 320 €</dd></div>
-          <div><dt>Boletín eléctrico</dt><dd>desde 150 €</dd></div>
-          <div><dt>Localización y reparación de avería</dt><dd>desde 45 €/h</dd></div>
-          <div><dt>Instalación completa de vivienda</dt><dd>desde 1.900 €</dd></div>
-        </dl>
-      </article>
-      <article class="precio reveal">
-        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-drop"/></svg></span><h3>Fontanería</h3></div>
-        <dl class="precio__list">
-          <div><dt>Localización de fuga</dt><dd>desde 90 €</dd></div>
-          <div><dt>Cambio de grifería</dt><dd>desde 70 €</dd></div>
-          <div><dt>Termo eléctrico instalado</dt><dd>desde 220 €</dd></div>
-          <div><dt>Sustitución de sanitario</dt><dd>desde 120 €</dd></div>
-          <div><dt>Cambio de tuberías de vivienda</dt><dd>desde 1.200 €</dd></div>
-        </dl>
-      </article>
-      <article class="precio precio--urg reveal">
-        <div class="precio__head"><span class="precio__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-alert"/></svg></span><h3>Urgencias</h3></div>
-        <dl class="precio__list">
-          <div><dt>Salida y diagnóstico</dt><dd>desde 90 €</dd></div>
-          <div><dt>Urgencia eléctrica sin luz</dt><dd>desde 90 €</dd></div>
-          <div><dt>Fuga de agua o desatasco</dt><dd>desde 120 €</dd></div>
-        </dl>
-        <p class="precio__nota">Las urgencias no entran en la cola de la obra: se atienden aparte. Si te has quedado sin luz o tienes una fuga, llama y te confirmamos la hora de llegada.</p>
-        <a class="btn btn--urg btn--sm" href="tel:+34643199580"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
-      </article>
-    </div>
-    <p class="precios__note reveal">Precios <strong>orientativos</strong>, con IVA aparte y a título de demostración. No son tarifas cerradas: el importe final se fija en el presupuesto por escrito, que es <strong>sin compromiso</strong>.</p>
-  </div>
-</section>
-
-<!-- ===================== PRESUPUESTO (banda CTA) ===================== -->
-<section class="sec sec--alt">
-  <div class="wrap">
-    <div class="quote-card reveal">
-      <div>
-        <span class="eyebrow">Presupuesto sin compromiso</span>
-        <h2>Te decimos qué cuesta antes de picar una pared.</h2>
-        <p>Pasamos a ver la vivienda sin coste, medimos y revisamos el estado de la instalación eléctrica y de fontanería. Te lo damos por escrito y con plazo, y solo avanzamos si te encaja.</p>
-      </div>
-      <div class="quote-card__actions">
-        <a href="#contacto" class="btn"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg>Pedir presupuesto</a>
-        <a href="tel:+34643199580" class="btn btn--ghost"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 08 · ZONA ===================== -->
-<section class="sec" id="zonas">
-  <span class="bignum bignum--r" aria-hidden="true" data-n="08"></span>
-  <div class="wrap">
-    <div class="zone-grid">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Zona de trabajo</span>
-        <h2>Majadahonda, Madrid Oeste y toda la Comunidad</h2>
-        <p>Electricidad y fontanería del día a día en Majadahonda y Madrid Oeste. Las reformas las hacemos en toda la Comunidad de Madrid.</p>
-      </div>
-      <div class="zone-chips reveal">
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Majadahonda</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Pozuelo de Alarcón</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Las Rozas</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Boadilla del Monte</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Villaviciosa de Odón</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Villanueva de la Cañada</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Las Matas</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Aravaca</span>
-        <span class="zone-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Madrid capital</span>
-        <span class="zone-chip zone-chip--all"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-home"/></svg>Reformas en toda la Comunidad de Madrid</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== GARANTÍAS + RESEÑAS ===================== -->
-<section class="sec sec--alt" id="garantias">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow alt">Garantías</span>
-      <h2>Tranquilidad de principio a fin</h2>
-      <p>Nuestras reseñas reales de Google se mostrarán aquí. Mientras tanto, esto es lo que sí te garantizamos.</p>
-    </div>
-    <div class="why-grid why-grid--3">
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-euro"/></svg></span><h3>Presupuesto cerrado</h3><p>Lo que presupuestamos es lo que pagas. Los imprevistos se hablan antes de ejecutarlos.</p></div>
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-cert"/></svg></span><h3>Instalaciones certificadas</h3><p>Electricidad y fontanería conforme a normativa, con boletín cuando corresponde.</p></div>
-      <div class="why-c reveal"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-shield"/></svg></span><h3>Obra limpia</h3><p>Protegemos suelos, muebles y accesos, y retiramos los escombros al terminar.</p></div>
-    </div>
-    <div class="reviews__real reveal">
-      <div class="g">
-        <div class="stars" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><use href="#ic-star"/></svg><svg viewBox="0 0 24 24"><use href="#ic-star"/></svg><svg viewBox="0 0 24 24"><use href="#ic-star"/></svg><svg viewBox="0 0 24 24"><use href="#ic-star"/></svg><svg viewBox="0 0 24 24"><use href="#ic-star"/></svg>
-        </div>
-        <div><b>Reseñas de Google</b><span>Espacio reservado a valoraciones reales verificadas de clientes.</span></div>
-      </div>
-      <a href="#contacto" class="btn btn--ghost btn--sm">Trabaja con nosotros</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 09 · FAQ ===================== -->
+<!-- ===================== FAQ ===================== -->
 <section class="sec" id="faq">
-  <span class="bignum bignum--l" aria-hidden="true" data-n="09"></span>
+  <span class="bignum" aria-hidden="true" data-n="07" style="left:-1.5vw;top:20px"></span>
   <div class="wrap">
+    <div class="hs hs--faq" aria-hidden="true"><div class="hs-chat hs-chat--1" data-l="Dani · Asistente IA"><div class="hl-m hl-m--u"><i></i><i></i></div><div class="hl-m"><i></i><i></i></div></div><div class="hs-chat hs-chat--2" data-l="Dani · Asistente IA"><div class="hl-m"><i></i><i></i></div><div class="hl-m hl-m--u"><i></i><i></i></div><div class="hl-m hl-m--t"><b></b></div></div></div>
     <div class="sec-head sec-head--center reveal">
       <span class="eyebrow">Preguntas frecuentes</span>
-      <h2>Lo que más nos preguntáis</h2>
-      <p>¿No ves tu duda? Escríbele a Dani y te respondemos.</p>
+      <h2>Lo que más nos preguntan</h2>
     </div>
-    <div class="faq reveal">
-      <details class="faq-item"><summary class="faq-q">¿El presupuesto de la reforma tiene algún coste?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">No. La visita y el presupuesto por escrito son sin coste y sin compromiso. Valoramos la obra según superficie, calidades y estado de las instalaciones, y solo avanzamos si estás de acuerdo.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Hacéis urgencias de electricidad y fontanería?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">Sí. Las averías eléctricas y las fugas de agua las atendemos como urgencia. Las reformas, en cambio, se presupuestan siempre con una visita previa.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Tramitáis el boletín eléctrico?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">Sí. Hacemos instalaciones eléctricas y tramitamos el boletín (certificado de instalación eléctrica) cuando la instalación lo requiere.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Cuánto tarda una reforma de baño?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">Depende del alcance: cambiar sanitarios no es lo mismo que rehacer alicatado, fontanería y electricidad. En el presupuesto te damos un plazo cerrado antes de empezar.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Os encargáis también de los materiales?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">Sí. Podemos llevar la reforma completa (albañilería, electricidad, fontanería y acabados) con los materiales incluidos, o trabajar solo la mano de obra si prefieres comprarlos tú.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Los precios que aparecen en la web son cerrados?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">No. Son precios orientativos, para que puedas hacerte una idea del orden de magnitud. El importe real depende de la superficie, las calidades y el estado de la instalación, y se cierra en el presupuesto por escrito después de la visita, que es sin compromiso.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Cómo reservo la visita?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">Habla con Dani, nuestro asistente. Eliges el servicio y la zona, escoges el día en el calendario y la franja horaria que te venga bien, y nos dejas tu nombre y tu teléfono. Te llamamos para confirmar la visita y darte el presupuesto.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿Qué horario tenéis para las visitas?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">De lunes a viernes de 8:00 a 20:00 y los sábados de 9:00 a 14:00. Los domingos no hacemos visitas de presupuesto, aunque las urgencias de luz y agua se atienden llamando por teléfono.</div></details>
-      <details class="faq-item"><summary class="faq-q">Tengo una urgencia ahora mismo, ¿también hay que pedir cita?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">No. Si te has quedado sin luz o tienes una fuga, lo más rápido es llamar al 643 199 580: no pasa por el calendario de visitas y te confirmamos la hora de llegada al momento.</div></details>
-      <details class="faq-item"><summary class="faq-q">¿En qué zonas trabajáis?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a">Trabajamos en Majadahonda y Madrid Oeste (Pozuelo, Las Rozas, Boadilla, Villaviciosa de Odón…) y hacemos reformas en toda la Comunidad de Madrid.</div></details>
+    <div class="faq">
+      <details class="faq-item reveal"><summary class="faq-q">¿La visita y el presupuesto tienen algún coste?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>No. Pasamos a ver la vivienda o el local, medimos, revisamos el estado de las instalaciones y te damos el presupuesto por escrito, por partidas y con plazo. Solo avanzamos si te encaja.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Hacéis también electricidad y fontanería sueltas?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Sí. Además de reformas completas, hacemos cambio de cuadro, puntos de luz, boletín eléctrico, fugas, calentadores, grifería y sanitarios.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Qué pasa si tengo una avería de luz o una fuga?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Las urgencias se atienden aparte de la obra. Llámanos al 643 199 580 y te confirmamos la hora de llegada.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Quién lleva la obra?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>El mismo equipo lleva albañilería, electricidad y fontanería, con un único interlocutor para que los gremios no se pisen.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Entregáis el boletín eléctrico?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Cuando la instalación lo requiere, sí: te lo entregamos junto con el repaso final del trabajo.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Cómo pido la visita?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Habla con Dani, nuestro asistente del chat: eliges qué necesitas, tu zona, el día y la hora, dejas tu nombre y teléfono, y te llamamos para confirmar. También puedes llamarnos al 643 199 580 o escribir a comercial@whitemoon.es.</p></div></details>
     </div>
   </div>
 </section>
 
 <!-- ===================== CONTACTO ===================== -->
-<section class="sec sec--alt" id="contacto">
+<section class="sec sec--bone" id="contacto">
   <div class="wrap">
     <div class="contact-grid">
-      <div class="sec-head reveal">
-        <span class="eyebrow alt">Contacto</span>
-        <h2>¿Reforma, avería o las dos cosas?</h2>
-        <p>Cuéntanos qué necesitas y te preparamos el presupuesto sin compromiso. Si es una urgencia de luz o de agua, llámanos directamente.</p>
+      <div>
+        <div class="sec-head reveal" style="margin-bottom:8px">
+          <span class="eyebrow">Contacto</span>
+          <h2>Estamos en<br>Madrid Oeste</h2>
+        </div>
+        <div class="contact-info reveal">
+          <div class="cinfo"><p class="k">Dirección</p><p class="val">Majadahonda, Madrid<br>(dirección de ejemplo en esta demo)</p></div>
+          <div class="cinfo"><p class="k">Teléfono y WhatsApp</p><p class="val"><a href="tel:+34643199580">643 199 580</a><br><a href="https://wa.me/34643199580" target="_blank" rel="noopener">Escribir por WhatsApp</a></p></div>
+          <div class="cinfo"><p class="k">Horario de ejemplo</p><p class="val">L–V 8:00–20:00<br>Sábado 9:00–14:00 · Domingo cerrado</p></div>
+          <div class="cinfo"><p class="k">Email</p><p class="val"><a href="mailto:comercial@whitemoon.es">comercial@whitemoon.es</a></p></div>
+        </div>
+        <div class="hl-map reveal" aria-hidden="true"><span class="hl-orbita"></span><span class="hl-pin"></span><span class="hs-chip hs-chip--g" data-l="Urgencias"></span></div>
       </div>
       <div class="contact-card reveal">
-        <button type="button" class="btn btn--block" data-bot><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>Hablar con Dani</button>
-        <a href="tel:+34643199580" class="btn btn--ghost btn--block"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
-        <a href="https://wa.me/34643199580" class="btn btn--ghost btn--block" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp</a>
+        <h3>Pide tu visita</h3>
+        <p>Cuéntale a Dani qué necesitas. Recoge tus datos y te llamamos para confirmar día y hora. La visita y el presupuesto son sin compromiso.</p>
+        <button class="btn btn--block" data-watio type="button"><svg aria-hidden="true"><use href="#ic-chat"/></svg>Hablar con Dani</button>
+        <a class="btn btn--ghost btn--block" href="tel:+34643199580"><svg aria-hidden="true"><use href="#ic-phone"/></svg>Llamar al 643 199 580</a>
+        <p class="contact-urg"><svg aria-hidden="true"><use href="#ic-info"/></svg>Empresa ficticia · demo de WhiteMoon</p>
       </div>
     </div>
   </div>
@@ -662,83 +817,77 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="#inicio" class="brand" aria-label="WhiteMoon Reformas"><img class="brand__logo" src="assets/logo-whitemoon-icono.jpg" alt="" width="96" height="90" aria-hidden="true"><span class="brand__name">WhiteMoon</span> <span class="brand__sub">Reformas</span></a>
-        <p>Reformas integrales, baños y cocinas, electricidad y fontanería en Majadahonda y Madrid Oeste. Reformas en toda la Comunidad de Madrid.</p>
-        <div class="foot-social">
-          <a href="https://wa.me/34643199580" aria-label="WhatsApp de WhiteMoon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg></a>
-          <a href="mailto:comercial@whitemoon.es" aria-label="Escribir a comercial@whitemoon.es"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-mail"/></svg></a>
-          <a href="https://whitemoon.es" aria-label="Web de WhiteMoon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-globe"/></svg></a>
-        </div>
+        <a href="./" class="brand">
+          <span class="brand__mark"><img src="assets/logo-whitemoon.webp" alt="" width="32" height="34" loading="lazy" decoding="async"></span>
+          <span class="brand__txt"><b>WhiteMoon</b><small>Reformas · Madrid</small></span>
+        </a>
+        <p>Reformas, electricidad y fontanería en Majadahonda y Madrid Oeste. Reformas integrales, baños, cocinas, instalaciones y urgencias.</p>
       </div>
       <div>
-        <h3>Navegación</h3>
+        <h4>Navegación</h4>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#top">Inicio</a></li>
+          <li><a href="#clinica">Sobre nosotros</a></li>
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#nosotros">Sobre nosotros</a></li>
-          <li><a href="#zonas">Zonas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#condiciones">Condiciones</a></li>
+          <li><a href="#faq">Preguntas</a></li>
         </ul>
       </div>
       <div>
-        <h3>Servicios</h3>
+        <h4>Servicios</h4>
         <ul>
           <li><a href="#servicios">Reformas integrales</a></li>
-          <li><a href="#servicios">Reformas de baño</a></li>
-          <li><a href="#servicios">Reformas de cocina</a></li>
+          <li><a href="#servicios">Baños y cocinas</a></li>
           <li><a href="#servicios">Electricidad</a></li>
           <li><a href="#servicios">Fontanería</a></li>
+          <li><a href="#servicios">Urgencias</a></li>
         </ul>
       </div>
       <div>
-        <h3>Contacto</h3>
+        <h4>Contacto</h4>
         <ul>
-          <li><a href="tel:+34643199580"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a></li>
-          <li><a href="https://wa.me/34643199580" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp</a></li>
-          <li><a href="mailto:comercial@whitemoon.es"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-mail"/></svg>comercial@whitemoon.es</a></li>
-          <li><span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-pin"/></svg>Majadahonda, Madrid</span></li>
+          <li><a href="tel:+34643199580"><svg aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a></li>
+          <li><a href="https://wa.me/34643199580" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp 643 199 580</a></li>
+          <li><a href="mailto:comercial@whitemoon.es"><svg aria-hidden="true"><use href="#ic-mail"/></svg>comercial@whitemoon.es</a></li>
+          <li><span><svg aria-hidden="true"><use href="#ic-pin"/></svg>Majadahonda, Madrid</span></li>
+          <li><span><svg aria-hidden="true"><use href="#ic-clock"/></svg>L–V 8:00–20:00 · S 9:00–14:00</span></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> WhiteMoon · Reformas, electricidad y fontanería.</span>
-      <span>Demo creada por WhiteMoon Agencia IA</span>
+      <span>© <span id="year">2026</span> WhiteMoon Reformas · Empresa ficticia · Demo</span>
+      <span>Demo IA por <a href="https://whitemoon.es" target="_blank" rel="noopener">WhiteMoon</a></span>
     </div>
   </div>
 </footer>
 
-<!-- ===================== DANI · AGENTE IA ===================== -->
-<button class="bot-fab" id="botFab" type="button" aria-label="Abrir el chat con Dani, asistente de reformas" aria-expanded="false" aria-controls="botWin">
-  <span class="ring" aria-hidden="true"></span>
-  <span class="badge" aria-hidden="true"></span>
-  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-chat"/></svg>
+<button id="watio-open" class="watio-btn" type="button" aria-label="Abrir el chat con Dani, asistente de reformas">
+  <span class="pulse" aria-hidden="true"></span>
+  <svg aria-hidden="true"><use href="#ic-chat"/></svg>
+  <span class="label">Habla con Dani</span>
 </button>
 
-<div class="bot-win" id="botWin" role="dialog" aria-label="Dani, asistente de reformas" aria-modal="false" aria-hidden="true">
-  <div class="bot-head">
-    <span class="bot-av" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#ic-tools"/></svg></span>
-    <span class="bot-id">
-      <b>Dani, asistente de reformas</b>
-      <span><i aria-hidden="true"></i>Respondemos al momento</span>
-    </span>
-    <button class="bot-close" id="botClose" type="button" aria-label="Cerrar el chat con Dani">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-close"/></svg>
-    </button>
+<section id="watio" class="watio-panel" aria-label="Asistente de reformas Dani" inert>
+  <div class="watio-head">
+    <span class="watio-head__av"><svg aria-hidden="true"><use href="#ic-build"/></svg></span>
+    <div>
+      <b>Dani<span class="dot" aria-hidden="true"></span></b>
+      <small>Asistente IA · WhiteMoon</small>
+    </div>
+    <button class="watio-head__close" type="button" aria-label="Cerrar chat"><svg aria-hidden="true"><use href="#ic-close"/></svg></button>
   </div>
-  <div class="bot-body" id="botBody" role="log" aria-live="polite"></div>
-  <div class="bot-chips" id="botChips"></div>
-  <form class="bot-input" id="botForm" autocomplete="off">
-    <label for="botInput" class="sr-only">Escribe tu mensaje para Dani</label>
-    <input id="botInput" type="text" placeholder="Escribe aquí…" autocomplete="off">
-    <button class="bot-send" type="submit" aria-label="Enviar mensaje">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-send"/></svg>
-    </button>
+  <div class="watio-body" role="log" aria-live="polite"></div>
+  <div class="watio-quick"></div>
+  <form class="watio-foot" autocomplete="off">
+    <label class="sr-only" for="watio-input">Escribe tu mensaje para Dani</label>
+    <input id="watio-input" type="text" name="mensaje" placeholder="Escribe tu respuesta…" disabled>
+    <button type="submit" aria-label="Enviar mensaje" disabled><svg aria-hidden="true"><use href="#ic-send"/></svg></button>
   </form>
-  <p class="bot-note">Tus datos solo se usan para contactarte sobre tu solicitud.</p>
-</div>
+  <p class="watio-note">Asistente virtual de demostración. Tus datos solo se usan para contactarte sobre tu solicitud.</p>
+</section>
 
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/dani.js" defer></script>
+<script src="assets/js/main.js?v=20261021" defer></script>
+<script src="assets/js/holo.js?v=20261021" defer></script>
+<script src="assets/js/watio.js?v=20261021" defer></script>
 </body>
 </html>

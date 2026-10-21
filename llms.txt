@@ -20,15 +20,8 @@
 ## Zona de trabajo
 Majadahonda y Madrid Oeste: Pozuelo de Alarcón, Las Rozas, Boadilla del Monte, Villaviciosa de Odón, Villanueva de la Cañada, Las Matas, Aravaca y Madrid capital. Las reformas se realizan en toda la Comunidad de Madrid.
 
-## Precios orientativos
-Ninguna de estas cifras es una tarifa cerrada: son referencias de partida, sin IVA, para hacerse una idea del orden de magnitud. El importe final se fija en el presupuesto por escrito tras la visita, que es sin compromiso.
-- Reforma integral de vivienda: desde 450 €/m².
-- Reforma de baño completa: desde 3.900 €. Cambio de bañera por plato de ducha: desde 1.450 €.
-- Reforma de cocina completa: desde 4.900 €.
-- Pintura de vivienda: desde 9 €/m².
-- Electricidad: punto de luz o enchufe desde 45 €, cambio de cuadro desde 320 €, boletín eléctrico desde 150 €, avería desde 45 €/h, instalación completa de vivienda desde 1.900 €.
-- Fontanería: localización de fuga desde 90 €, cambio de grifería desde 70 €, termo eléctrico instalado desde 220 €, sustitución de sanitario desde 120 €, cambio de tuberías desde 1.200 €.
-- Urgencias: salida y diagnóstico desde 90 €, fuga de agua o desatasco desde 120 €.
+## Precios
+Es una demo con empresa ficticia: no publica precios ni cifras. En una empresa real, el importe se fija en el presupuesto por escrito tras la visita, que es sin compromiso.
 
 ## Cómo se trabaja
 - Reformas: siempre con visita previa sin coste, medición y presupuesto por escrito con partidas y plazo.
